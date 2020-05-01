@@ -6,13 +6,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] CameraController cc;
+    private Camera rayCamera;
+    
     Vector3 destination;
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        
+        rayCamera = cc.currentCam;
+        Ray ray = rayCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;        
 
         if (Input.GetMouseButtonDown(0))
         {
