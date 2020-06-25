@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
-    private bool moving = false;  
+    private bool moving = false;
+   
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         else
         { 
             moving = true;
+           
         }
 
         if(moving == false)  
@@ -33,9 +35,14 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Already moving");
         }
     }
-     private void Arrived()
+   
+    private void Arrived()
     {    
         moving = false;
+ 
     }
 
+    
+
+    
 }
