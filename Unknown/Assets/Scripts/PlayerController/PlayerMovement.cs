@@ -39,10 +39,24 @@ public class PlayerMovement : MonoBehaviour
     private void Arrived()
     {    
         moving = false;
- 
     }
 
-    
 
-    
+    private void Update()
+    {
+        if (agent.remainingDistance > 0.1)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+
+
+
 }

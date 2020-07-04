@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 1003536394}
   m_Layer: 5
   m_Name: ItemsParent
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,8 +958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -77.31, y: 127.34}
-  m_SizeDelta: {x: 154.62, y: 254.68}
+  m_AnchoredPosition: {x: -77.31, y: 124.5}
+  m_SizeDelta: {x: 154.62, y: 249.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1003536391
 MonoBehaviour:
@@ -1399,7 +1399,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1670707194
 MonoBehaviour:
   m_ObjectHideFlags: 0
