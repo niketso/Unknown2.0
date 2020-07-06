@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class CameraChange : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
-    [SerializeField] private Camera prevCam;
-    [SerializeField] private CameraController cc;
+    [SerializeField] public Camera cam;
+    [SerializeField] public Camera prevCam;
+    [SerializeField] public CameraController cc;
 
     private void OnTriggerEnter(Collider other)
     {        
