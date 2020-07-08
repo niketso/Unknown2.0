@@ -34,6 +34,11 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
+                if (hit.transform.tag == "Destination")
+                {
+                    destination = hit.point;
+                    player.GetComponent<PlayerMovement>().Walk(destination);
+                }
 
                 //hit.transform.gameObject.layer == LayerMask.NameToLayer("UI")
                 Debug.Log(hit.transform.gameObject.layer);

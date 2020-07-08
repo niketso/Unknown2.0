@@ -7,23 +7,21 @@ public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
     private bool moving = false;
-   
+    private PlayerAnimator playerAnimator;  
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        playerAnimator = GetComponent<PlayerAnimator>();
     }
-
-    public void Walk(Vector3 destination)
+    void Update()
     {
         if (agent.remainingDistance < 0.1)
-        {
             Arrived();
         }
         else
         { 
             moving = true;
-           
         }
 
         if(moving == false)  
@@ -35,10 +33,10 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Already moving");
         }
     }
-   
-    private void Arrived()
+     private void Arrived()
     {    
         moving = false;
+        playerAnimator.Idle();
     }
 
 

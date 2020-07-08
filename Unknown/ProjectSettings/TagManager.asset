@@ -7,6 +7,7 @@ TagManager:
   - Destination
   - Object
   - Inventory
+  - Animator
   layers:
   - Default
   - TransparentFX
