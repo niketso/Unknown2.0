@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Camera rayCamera;
     private int layerMask;
     private int layerMask1;
+    public bool isObj = false;
     
     Vector3 destination;
 
@@ -34,24 +35,17 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                if (hit.transform.tag == "Destination")
-                {
-                    destination = hit.point;
-                    player.GetComponent<PlayerMovement>().Walk(destination);
-                }
-
-                //hit.transform.gameObject.layer == LayerMask.NameToLayer("UI")
-                Debug.Log(hit.transform.gameObject.layer);
                 
-               if (hit.transform.tag == "Destination"&& !(EventSystem.current.IsPointerOverGameObject()))
+                if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
                  {
+                    
                         destination = hit.point;
                         player.GetComponent<PlayerMovement>().Walk(destination);
+                        isObj = false;
                         RemoveFocus();
                  }
 
-
-               if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !(EventSystem.current.IsPointerOverGameObject()))
+               if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
                    {
 
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
@@ -81,7 +75,7 @@ public class PlayerController : MonoBehaviour
             focus = newFocus;
             destination = newFocus.transform.position + new Vector3(1.5f, 0, 0);
             player.GetComponent<PlayerMovement>().Walk(destination);
-            
+            isObj = true;
         }
    
         newFocus.OnFocused(player.transform);
