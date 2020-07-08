@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Camera rayCamera;
     
     Vector3 destination;
+    
     void Update()
     {
         rayCamera = cc.currentCam;
@@ -23,12 +24,13 @@ public class PlayerController : MonoBehaviour
                 if (hit.transform.tag == "Destination")
                 {
                     destination = hit.point;
-                    player.GetComponent<PlayerMovement>().Walk(destination);
+                    player.GetComponent<PlayerMovement>().Walk(destination);                         
+
                 }
 
                 if (hit.transform.tag == "Object")
                 {
-
+                    player.GetComponent<PlayerAnimator>().PickUpFront();
                 }
 
             }

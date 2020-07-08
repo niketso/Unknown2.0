@@ -27,6 +27,12 @@ public class PlayerAnimator : MonoBehaviour
     {
         Debug.Log("play Walk");
         playerAnimator.SetBool("Moving", true);
+    }
+    public void PickUpFront()
+    {
+        Debug.Log("play PUFront");
+        playerAnimator.SetBool("Moving", false);
+        playerAnimator.SetTrigger("PickUpFront");
 
     }
 }
