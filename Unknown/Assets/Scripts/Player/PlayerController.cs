@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
 
 

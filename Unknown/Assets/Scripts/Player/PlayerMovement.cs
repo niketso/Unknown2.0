@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private bool moving = false;
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
+    //private bool canMove = true;
 
     private void Awake()
     {
@@ -24,22 +25,25 @@ public class PlayerMovement : MonoBehaviour
         moving = false;  
         
         if (playerController.isObj)
-        {
-            playerAnimator.PickUpFront();
-            playerController.isObj = false;
+        {           
+           playerAnimator.PickUpFront();
+           playerController.isObj = false;    
         }
         else
-        {
+        {          
             playerAnimator.Idle();
         }
     }
 
     public void Walk(Vector3 destination)
-    {
-        agent.destination = destination;
-        moving = true;
-        playerAnimator.Walk();
+    {   
+     agent.destination = destination;
+     moving = true;
+     playerAnimator.Walk();
+     
     }
+
+        
 
     private void Update()
     {
