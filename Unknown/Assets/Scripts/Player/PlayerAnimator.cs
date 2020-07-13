@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,39 +7,53 @@ public class PlayerAnimator : MonoBehaviour
 
     private GameObject player;
     private Animator playerAnimator;
-    private bool moving;
-    public bool idle;
-
+    public bool pickingUp;
 
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerAnimator = player.GetComponent<Animator>();
-        moving = playerAnimator.GetBool("Moving");
-        //idle = playerAnimator.GetBool("Idle");
         Idle();
-    }              
+    }
+    void Update()
+    {
+        pickingUp = playerAnimator.GetBool("PickingUp");
+
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up Front"))
+        {
+            playerAnimator.SetBool("PickingUp", true);
+
+        }
+        else
+        {
+            playerAnimator.SetBool("PickingUp", false);
+        }
+    }
     public void Idle()
     {
-        Debug.Log("play Idle");
-        
-        playerAnimator.SetBool("Moving", false);
-        //playerAnimator.SetBool("Idle", true);
-        //playerAnimator.SetTrigger("Idle"); 
+        if (!pickingUp)
+        {
+            playerAnimator.SetBool("Moving", false);
+            playerAnimator.SetBool("Idle", true);
+            playerAnimator.SetTrigger("Idle");
+        }
     }
     public void Walk()
     {
-        Debug.Log("play Walk");
         playerAnimator.SetBool("Moving", true);
-       //playerAnimator.SetBool("Idle", false);
+        playerAnimator.SetBool("Idle", false);
     }
     public void PickUpFront()
-    {
-        Debug.Log("play PUFront");
-        playerAnimator.SetBool("Moving", false);
-    //playerAnimator.SetBool("Idle", false);
-        playerAnimator.SetTrigger("PickUpFront");
+    {        
+        playerAnimator.SetBool("Idle", false);
+        playerAnimator.SetBool("Moving", true);
+        playerAnimator.SetTrigger("PickUpFront");        
+    }
 
+    void PickUpNow()
+    {
     }
     
+
+        
 }

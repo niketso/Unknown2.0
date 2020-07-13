@@ -6,53 +6,45 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
-    private bool moving = false;
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
-    //private bool canMove = true;
-
+    
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         playerAnimator = GetComponent<PlayerAnimator>();
         playerController = FindObjectOfType<PlayerController>();
-
     }
-
 
     private void Arrived()
     {
-        moving = false;  
-        
         if (playerController.isObj)
-        {           
-           playerAnimator.PickUpFront();
-           playerController.isObj = false;    
+        {
+            playerAnimator.PickUpFront();
+            playerController.isObj = false;    
         }
         else
-        {          
+        {
             playerAnimator.Idle();
         }
     }
 
     public void Walk(Vector3 destination)
-    {   
-     agent.destination = destination;
-     moving = true;
-     playerAnimator.Walk();
-     
-    }
-
-        
+    {
+        if (!playerAnimator.pickingUp)
+        {
+            agent.destination = destination;
+            playerAnimator.Walk();
+        }
+    }   
 
     private void Update()
-    {
-        if (agent.remainingDistance < 0.1)
+    {        
+        if (agent.remainingDistance < 0.1 && playerAnimator.pickingUp == false)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            
+            Cursor.visible = true;            
         }
         else
         {

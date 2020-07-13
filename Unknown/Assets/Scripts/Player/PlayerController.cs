@@ -37,8 +37,7 @@ public class PlayerController : MonoBehaviour
             {
                 
                 if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
-                 {
-                    
+                 {                    
                         destination = hit.point;
                         player.GetComponent<PlayerMovement>().Walk(destination);
                         isObj = false;
