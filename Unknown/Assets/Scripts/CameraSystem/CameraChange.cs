@@ -11,7 +11,7 @@ public class CameraChange : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {        
-        if (cc.currentCam == cam)
+        if (cc.currentCam == cam && cc.currentCam != cc.camera0)
         {
             cc.currentCam = prevCam;
             cc.CameraEnable();
@@ -22,5 +22,4 @@ public class CameraChange : MonoBehaviour
             cc.CameraEnable();
         }
     }
-        
 }

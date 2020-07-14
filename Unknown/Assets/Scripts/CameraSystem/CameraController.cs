@@ -8,9 +8,8 @@ public class CameraController : MonoBehaviour
     public Camera currentCam;  
     private void Start()
     {
-        
-        CameraSet();
         currentCam = camera0;
+        CameraSet();        
     }
     void CameraSet()
     {        
