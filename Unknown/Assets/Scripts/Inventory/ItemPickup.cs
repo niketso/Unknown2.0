@@ -3,23 +3,19 @@
 public class ItemPickup : Interactable
 {
     public Item item;
+    
 
     public override void Interact()
     {
         base.Interact();
 
-        PickUp();
+        //PickUp();
     }
 
-    void PickUp()
+    public void PickUp()
     {
-        Debug.Log("Picking up " + item.name);       
-        bool wasPickedUp = Inventory.instance.AddItem(item);
-
-        if (wasPickedUp)
-        {
-             Destroy(gameObject);
-        }
-
+        Debug.Log("Picking up " + item.name);        
+        Inventory.instance.AddItem(item);       
     }
+    
 }

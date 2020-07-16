@@ -50,10 +50,9 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetTrigger("PickUpFront");        
     }
 
-    void PickUpNow()
+    public void PickUpNow()
     {
+        FindObjectOfType<Interactable>().PickUpItem();
     }
-    
-
-        
+     
 }
