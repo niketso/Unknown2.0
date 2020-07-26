@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private int layerMask1;
     public bool isObj = false;
     
+    
     Vector3 destination;
 
     public Interactable focus;
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-            destination = newFocus.transform.position + new Vector3(1.5f, 0, 0);
+            destination = newFocus.transform.position;// + new Vector3(1.5f, 0, 0);
             player.GetComponent<PlayerMovement>().Walk(destination);
             isObj = true;
         }
@@ -88,5 +89,4 @@ public class PlayerController : MonoBehaviour
         }
         focus = null;
     }
-
 }

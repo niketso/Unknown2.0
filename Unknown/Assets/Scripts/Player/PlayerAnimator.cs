@@ -7,6 +7,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private GameObject player;
     private Animator playerAnimator;
+    [SerializeField] private PlayerController playerController;
     public bool pickingUp;
 
     void Awake()
@@ -50,9 +51,11 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetTrigger("PickUpFront");        
     }
 
+    //evento de animacion pickUpFront();
     public void PickUpNow()
     {
-        FindObjectOfType<Interactable>().PickUpItem();
+        // FindObjectOfType<Interactable>().PickUpItem();              
+        playerController.focus.PickUpItem();       
     }
-     
+
 }

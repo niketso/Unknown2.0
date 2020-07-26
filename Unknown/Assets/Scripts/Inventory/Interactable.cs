@@ -54,6 +54,7 @@ public class Interactable : MonoBehaviour
         //Debug.Log("Interacting with " + transform.name);
     }
 
+    
     public void PickUpItem()
     {
         gameObject.GetComponent<ItemPickup>().PickUp();
