@@ -11398,7 +11398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010717166630, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5937193
+      value: -0.583
       objectReference: {fileID: 0}
     - target: {fileID: 4000010717166630, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11406,7 +11406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010717166630, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.124
       objectReference: {fileID: 0}
     - target: {fileID: 4000010717166630, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_LocalRotation.x
@@ -16864,11 +16864,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977080840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.187579, y: 2.5009987, z: 0.23522261}
-  m_Center: {x: -0.00000010803342, y: 0, z: 0}
+  m_Size: {x: 1.2906396, y: 2.7767794, z: 0.24521774}
+  m_Center: {x: 0.051530242, y: -0.13789034, z: -0.0049975812}
 --- !u!114 &977080844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26223,6 +26223,18 @@ PrefabInstance:
     - target: {fileID: 8265484, guid: 8a23a06107e96134598493163a37174f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265484, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265484, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265484, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a23a06107e96134598493163a37174f, type: 3}
@@ -38644,7 +38656,6 @@ GameObject:
   - component: {fileID: 2080699178}
   - component: {fileID: 2080699177}
   - component: {fileID: 2080699176}
-  - component: {fileID: 2080699181}
   m_Layer: 0
   m_Name: Key
   m_TagString: Object
@@ -38741,18 +38752,6 @@ Transform:
   m_Father: {fileID: 638879359}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2080699181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080699175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22070b0390739e439f0ebb95024f557, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2086664408
 GameObject:
   m_ObjectHideFlags: 0

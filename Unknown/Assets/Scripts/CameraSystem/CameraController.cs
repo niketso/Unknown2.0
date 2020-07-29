@@ -3,8 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-{    
+{
+    public static CameraController instance;
+
     [SerializeField] public Camera camera0;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Inventory found!");
+        }
+
+        instance = this;
+    }
     public Camera currentCam;  
     private void Start()
     {
@@ -24,5 +35,10 @@ public class CameraController : MonoBehaviour
             Camera.allCameras[i].enabled = false;
         }
         currentCam.enabled = true;
+    }
+
+    public Camera GetCurrentCam()
+    {
+        return currentCam;
     }
 }
