@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     private int layerMask;
     private int layerMask1;
     public bool isObj = false;
-    
-    
+    public bool isDoor = false;
+
+
     Vector3 destination;
 
     public Interactable focus;
@@ -36,15 +37,15 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                
+                //Player Movement
                 if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
                  {                    
                         destination = hit.point;
                         player.GetComponent<PlayerMovement>().Walk(destination);
-                        isObj = false;
+                        isObj = false; // es necesaria esta linea?
                         RemoveFocus();
                  }
-
+                //Player interaction with objects
                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
                    {
 
@@ -56,9 +57,17 @@ public class PlayerController : MonoBehaviour
                      }
 
                    }
-                
-            }
 
+                //Door Open
+                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Door" && !EventSystem.current.IsPointerOverGameObject())
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
+            }
         }
     }
 
@@ -72,9 +81,14 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-            destination = newFocus.transform.position;// + new Vector3(1.5f, 0, 0);
+            destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
             player.GetComponent<PlayerMovement>().Walk(destination);
-            isObj = true;
+
+            //Chequea que tipo de Interactable es
+            if (newFocus.tag == "Object")
+                isObj = true;
+            else if (newFocus.tag == "Door")                
+                isDoor = true; //Para cuando este la animacion de la puerta
         }
    
         newFocus.OnFocused(player.transform);

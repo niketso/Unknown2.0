@@ -8,6 +8,8 @@ TagManager:
   - Object
   - Inventory
   - Animator
+  - Fire
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - FireLayer
   - 
   - 
   - 

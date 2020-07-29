@@ -50,7 +50,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        //cada objecto interactual de manera especifica.
+        //cada objecto interactua de manera especifica.
         //Debug.Log("Interacting with " + transform.name);
     }
 

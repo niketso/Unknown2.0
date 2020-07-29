@@ -20,13 +20,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         pickingUp = playerAnimator.GetBool("PickingUp");
 
-        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up Front"))
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up Front") || playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Open Door"))
         {
+            Debug.Log("pUP true");
             playerAnimator.SetBool("PickingUp", true);
-
         }
         else
         {
+            Debug.Log("pUP false");
             playerAnimator.SetBool("PickingUp", false);
         }
     }
@@ -54,8 +55,15 @@ public class PlayerAnimator : MonoBehaviour
     //evento de animacion pickUpFront();
     public void PickUpNow()
     {
-        // FindObjectOfType<Interactable>().PickUpItem();              
+        // FindObjectOfType<Interactable>().PickUpItem();            
         playerController.focus.PickUpItem();       
+    }
+
+    public void OpenDoor()
+    {
+        playerAnimator.SetBool("Idle", false);
+        playerAnimator.SetBool("Moving", true);
+        playerAnimator.SetTrigger("OpenDoor");
     }
 
 }

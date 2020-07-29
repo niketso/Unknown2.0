@@ -16,12 +16,17 @@ public class PlayerMovement : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
     }
 
-    private void Arrived()
+    private void Arrived() //Activa la animacion segun que tipo de interactuable es
     {
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
-            playerController.isObj = false;    
+            playerController.isObj = false; //esto por que era? Asi lo comentamos bien. 
+        }
+        else if (playerController.isDoor)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isDoor = false; //evidentemente no sale de la animacion sin esta linea
         }
         else
         {

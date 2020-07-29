@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemOpen : Interactable
 {
+    [SerializeField]
+    public bool isLocked;
     public override void Interact()
     {
         base.Interact();
@@ -14,7 +16,7 @@ public class ItemOpen : Interactable
     public void Open()
     {
         Debug.Log("OPEN");
-        if (this.GetComponentInParent<Animator>().GetBool("IsLocked") == false)
+        if (isLocked == false)
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
     }
 }
