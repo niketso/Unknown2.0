@@ -6,6 +6,4 @@ public class Item : ScriptableObject
     public new string name = "New Item";
     public string description;
     public Sprite icon = null;
-    
-
 }

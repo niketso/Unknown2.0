@@ -1363,51 +1363,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1079928385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1079928387}
-  - component: {fileID: 1079928386}
-  m_Layer: 0
-  m_Name: CameraController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1079928386
+--- !u!114 &1079928386 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7927922955336576815, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7927922956416452973}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079928385}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b683f661206c248a9e078d62c1edb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera0: {fileID: 1488599193}
-  currentCam: {fileID: 1488599193}
---- !u!4 &1079928387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079928385}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 26.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169484506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,6 +2266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1194824052}
   cc: {fileID: 1079928386}
+  isObj: 0
+  focus: {fileID: 0}
 --- !u!4 &1837273802
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,3 +2537,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7927922956416452973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7927922955336576812, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576814, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927922955336576815, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: camera0
+      value: 
+      objectReference: {fileID: 1488599193}
+    - target: {fileID: 7927922955336576815, guid: 1bb8a59a68bc63842be2d37ca246a0c2,
+        type: 3}
+      propertyPath: currentCam
+      value: 
+      objectReference: {fileID: 1488599193}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1bb8a59a68bc63842be2d37ca246a0c2, type: 3}

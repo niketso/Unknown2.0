@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 
     private bool isFocus = false;
     private bool hasInteracted = false;
+    
     public Transform player;
 
     private void Update()
@@ -17,6 +18,7 @@ public class Interactable : MonoBehaviour
             {
                 Debug.Log("Interacting with " + transform.name);
                 Interact();
+
                 hasInteracted = true;
             }
         }
@@ -48,7 +50,14 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        //cada objecto interactual de manera especifica.
-        Debug.Log("Interacting with " + transform.name);
+        //cada objecto interactua de manera especifica.
+        //Debug.Log("Interacting with " + transform.name);
     }
+
+    
+    public void PickUpItem()
+    {
+        gameObject.GetComponent<ItemPickup>().PickUp();
+        Destroy(gameObject);
+    }          
 }
