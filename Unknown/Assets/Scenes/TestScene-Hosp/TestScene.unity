@@ -953,7 +953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41001199}
   - component: {fileID: 41001198}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2314,6 +2314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger7
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!4 &126004890 stripped
@@ -2878,6 +2883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger6
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!4 &178222493 stripped
@@ -3049,6 +3059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -5982,6 +5997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger4
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!1001 &382817002
@@ -7370,6 +7390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -12108,6 +12133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger13
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!4 &706529447 stripped
@@ -12377,6 +12407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -13188,6 +13223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -14409,6 +14449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -15644,6 +15689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -17128,7 +17178,7 @@ GameObject:
   - component: {fileID: 1021485192}
   m_Layer: 0
   m_Name: --Floor--
-  m_TagString: Untagged
+  m_TagString: Destination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25271,6 +25321,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400574702}
     m_Modifications:
+    - target: {fileID: 113868, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118524, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 131920, guid: 8a23a06107e96134598493163a37174f, type: 3}
       propertyPath: m_Name
       value: CampFire
@@ -25278,6 +25336,26 @@ PrefabInstance:
     - target: {fileID: 131920, guid: 8a23a06107e96134598493163a37174f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 131920, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 144292, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146336, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176684, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182176, guid: 8a23a06107e96134598493163a37174f, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421400, guid: 8a23a06107e96134598493163a37174f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25648,6 +25726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -29875,6 +29958,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger14
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!4 &1694758957 stripped
@@ -31698,6 +31786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger9
       objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
 --- !u!1001 &1783951200
@@ -32101,6 +32194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -32664,6 +32762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -33856,6 +33959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}
@@ -35514,6 +35622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338227001363506576, guid: ceff022e8aaa84d40ba56743bb8b3651,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff022e8aaa84d40ba56743bb8b3651, type: 3}

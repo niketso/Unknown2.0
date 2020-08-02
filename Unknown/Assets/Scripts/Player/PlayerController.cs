@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public GameObject player;
     [SerializeField] public CameraController cc;
     private Camera rayCamera;
-    private int layerMask;
-    private int layerMask1;
     public bool isObj = false;
     public bool isDoor = false;
 
@@ -18,11 +16,11 @@ public class PlayerController : MonoBehaviour
 
     public Interactable focus;
 
+    //private int layerMask;
+
     private void Awake()
     {
-        layerMask = LayerMask.GetMask("Default");
-        layerMask1 = LayerMask.GetMask("UI");
-        
+        //layerMask = ~LayerMask.GetMask("Player");
     }
     void Update()
     {
@@ -34,28 +32,28 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
 
-            if (Physics.Raycast(ray, out hit, 100))
+            if (Physics.Raycast(ray, out hit, 100/*, layerMask*/))
             {
                 //Player Movement
                 if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
-                 {                    
-                        destination = hit.point;
-                        player.GetComponent<PlayerMovement>().Walk(destination);
-                        isObj = false; // es necesaria esta linea?
-                        RemoveFocus();
-                 }
+                {                    
+                    destination = hit.point;
+                    player.GetComponent<PlayerMovement>().Walk(destination);
+                    isObj = false; // es necesaria esta linea?
+                    RemoveFocus();
+                }
                 //Player interaction with objects
                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
-                   {
+                 {
 
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                    if (interactable != null)
-                     {
-                            SetFocus(interactable);
-                     }
+                if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
 
-                   }
+                }
 
                 //Door Open
                 if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Door" && !EventSystem.current.IsPointerOverGameObject())
