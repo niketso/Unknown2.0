@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public bool isObj = false;
     public bool isDoor = false;
 
-
     Vector3 destination;
 
     public Interactable focus;
@@ -23,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         layerMask = LayerMask.GetMask("Default");
         layerMask1 = LayerMask.GetMask("UI");
+        
     }
     void Update()
     {
@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
-
 
             if (Physics.Raycast(ray, out hit, 100))
             {

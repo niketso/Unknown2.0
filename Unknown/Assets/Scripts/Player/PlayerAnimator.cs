@@ -22,12 +22,10 @@ public class PlayerAnimator : MonoBehaviour
 
         if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up Front") || playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Open Door"))
         {
-            Debug.Log("pUP true");
             playerAnimator.SetBool("PickingUp", true);
         }
         else
         {
-            Debug.Log("pUP false");
             playerAnimator.SetBool("PickingUp", false);
         }
     }
