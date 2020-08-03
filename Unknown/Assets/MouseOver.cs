@@ -6,24 +6,21 @@ using UnityEngine.UI;
 public class MouseOver : MonoBehaviour
 {
     [SerializeField]
-    GameObject popUpWindow;
-
     PopUpController popUpController;
-    public string text;
+    string itemText;
+   
     void Start()
     {
-        text = GetComponent<Text>().text;
-        popUpController = popUpWindow.GetComponent<PopUpController>();
+        itemText = this.GetComponent<Text>().text;
     }
 
     void OnMouseOver()
     {
-        popUpWindow.SetActive(true);
-        popUpController.itemText = text;        
+        popUpController.MouseOverWindow(itemText);
     }
 
     void OnMouseExit()
     {
-        popUpWindow.SetActive(false);
+        popUpController.mouseOverWindow.SetActive(false);
     }
 }
