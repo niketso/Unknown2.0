@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Destination: " + agent.destination);
         if (moved == true && agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
         {
             Arrived();

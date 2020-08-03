@@ -11,6 +11,8 @@ TagManager:
   - Fire
   - Door
   - Obstacle
+  - FireAlarm
+  - FuseBox
   layers:
   - Default
   - TransparentFX

@@ -64,6 +64,16 @@ public class PlayerController : MonoBehaviour
                         SetFocus(interactable);
                     }
                 }
+
+                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FireAlarm" && !EventSystem.current.IsPointerOverGameObject())
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
+
             }
         }
     }
@@ -84,8 +94,12 @@ public class PlayerController : MonoBehaviour
             //Chequea que tipo de Interactable es
             if (newFocus.tag == "Object")
                 isObj = true;
-            else if (newFocus.tag == "Door")                
+            else if (newFocus.tag == "Door")
                 isDoor = true; //Para cuando este la animacion de la puerta
+            else if (newFocus.tag == "FireAlarm")
+                isDoor = true;
+            else if (newFocus.tag == "FuseBox")
+                isDoor = true;
         }
    
         newFocus.OnFocused(player.transform);
