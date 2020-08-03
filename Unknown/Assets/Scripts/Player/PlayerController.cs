@@ -11,17 +11,13 @@ public class PlayerController : MonoBehaviour
     private Camera rayCamera;
     public bool isObj = false;
     public bool isDoor = false;
+    public bool isFuseBox = false;
+    public bool isFireAlarm = false;
 
     Vector3 destination;
 
     public Interactable focus;
 
-    //private int layerMask;
-
-    private void Awake()
-    {
-        //layerMask = ~LayerMask.GetMask("Player");
-    }
     void Update()
     {
         rayCamera = cc.currentCam;
@@ -32,7 +28,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
 
-            if (Physics.Raycast(ray, out hit, 100/*, layerMask*/))
+            if (Physics.Raycast(ray, out hit, 100))
             {
                 //Player Movement
                 if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
@@ -44,7 +40,7 @@ public class PlayerController : MonoBehaviour
                 }
                 //Player interaction with objects
                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
-                 {
+               {
 
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
@@ -52,7 +48,6 @@ public class PlayerController : MonoBehaviour
                     {
                         SetFocus(interactable);
                     }
-
                 }
 
                 //Door Open
@@ -74,6 +69,14 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
+                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FuseBox" && !EventSystem.current.IsPointerOverGameObject())
+                {                  
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
             }
         }
     }
@@ -88,18 +91,31 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-            destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
-            player.GetComponent<PlayerMovement>().Walk(destination);
+            //Esto es para que no frene tan lejos
+            if (newFocus.tag == "FuseBox")
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
+                isFuseBox = true;
+            }
+            else if (newFocus.tag == "FireAlarm")
+            {
+                destination = newFocus.GetComponent<FireAlarm>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
+                isFireAlarm = true;
+            }
+            else
+            {
+                destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
+                player.GetComponent<PlayerMovement>().Walk(destination);
+            }
 
             //Chequea que tipo de Interactable es
             if (newFocus.tag == "Object")
                 isObj = true;
             else if (newFocus.tag == "Door")
                 isDoor = true; //Para cuando este la animacion de la puerta
-            else if (newFocus.tag == "FireAlarm")
-                isDoor = true;
-            else if (newFocus.tag == "FuseBox")
-                isDoor = true;
+
         }
    
         newFocus.OnFocused(player.transform);

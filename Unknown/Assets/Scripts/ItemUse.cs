@@ -5,12 +5,21 @@ using UnityEngine;
 public class ItemUse : Interactable
 {
     [SerializeField]
+    GameObject stopingZone;
+    [SerializeField]
     GameObject otherObject;
-    
+    public Vector3 stopingZonePos;
+
+    public bool canUse = false;
+
+    void Start()
+    {
+        stopingZonePos = stopingZone.transform.position;
+    }
+
     public override void Interact()
     {
         base.Interact();
-
         Use();
     }
 
@@ -18,7 +27,14 @@ public class ItemUse : Interactable
     {
         Debug.Log("USE");
         //habilitar alarma
-        otherObject.gameObject.GetComponent<FireAlarm>().isUsable = true;   
-       
+        otherObject.GetComponent<FireAlarm>().isUsable = true;          
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            canUse = true;
+        }
     }
 }

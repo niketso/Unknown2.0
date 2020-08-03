@@ -9,7 +9,6 @@ public class ItemOpen : Interactable
     public override void Interact()
     {
         base.Interact();
-
         Open();
     }
 

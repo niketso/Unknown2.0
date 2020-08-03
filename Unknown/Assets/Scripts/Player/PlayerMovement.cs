@@ -31,6 +31,16 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.OpenDoor();
             playerController.isDoor = false; //evidentemente no sale de la animacion sin esta linea
         }
+        else if (playerController.isFuseBox)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isFuseBox = false;
+        }
+        else if (playerController.isFireAlarm)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isFireAlarm = false;
+        }
         else
         {
             playerAnimator.Idle();
@@ -50,11 +60,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+
         if (moved == true && agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;            
+            Cursor.visible = true;
         }
         else if (moved == true)
         {
