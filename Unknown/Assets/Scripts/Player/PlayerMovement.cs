@@ -46,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.OpenDoor();
             playerController.isFireAlarm = false;
         }
+        else if (playerController.isPuzzle)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isPuzzle = false;
+        }
         else
         {
             playerAnimator.Idle();

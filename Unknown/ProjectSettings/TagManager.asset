@@ -15,6 +15,7 @@ TagManager:
   - FuseBox
   - PopUpWindow
   - Text
+  - Puzzle
   layers:
   - Default
   - TransparentFX

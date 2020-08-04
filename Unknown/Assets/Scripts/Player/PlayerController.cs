@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public bool isDoor = false;
     public bool isFuseBox = false;
     public bool isFireAlarm = false;
+    public bool isPuzzle = false;
 
     Vector3 destination;
 
@@ -77,6 +78,15 @@ public class PlayerController : MonoBehaviour
                         SetFocus(interactable);
                     }
                 }
+
+                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Puzzle" && !EventSystem.current.IsPointerOverGameObject())
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
+                }
             }
         }
     }
@@ -109,6 +119,12 @@ public class PlayerController : MonoBehaviour
                 destination = newFocus.GetComponent<ItemPickup>().stopingZonePos;
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isObj = true;
+            }
+            else if (newFocus.tag == "Puzzle")
+            {
+                destination = newFocus.GetComponent<PuzzleItem>().stoppingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
+                isPuzzle = true;
             }
             else
             {
