@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = startingVolume;
         }
 
-        AudioManager.instance.Play("MusicGameplay", true);
+        AudioManager.instance.Play("Music", true);
     }
 
     public void Play(string name, bool loop)
@@ -86,6 +86,17 @@ public class AudioManager : MonoBehaviour
             }
         }
         return isPlaying;
+    }
+
+    public void StopSound(string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name == name)
+            {
+                s.source.Stop();
+            }
+        }
     }
 }
 
