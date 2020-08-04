@@ -126,6 +126,12 @@ public class PlayerController : MonoBehaviour
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isPuzzle = true;
             }
+            else if (newFocus.tag == "Door")
+            {
+                destination = newFocus.GetComponent<ItemOpen>().stoppingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
+                isDoor = true;
+            }
             else
             {
                 destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
@@ -133,8 +139,8 @@ public class PlayerController : MonoBehaviour
             }
 
             //Chequea que tipo de Interactable es
-             if (newFocus.tag == "Door")
-                isDoor = true; //Para cuando este la animacion de la puerta
+            // if (newFocus.tag == "Door")
+               // isDoor = true; //Para cuando este la animacion de la puerta
 
         }
    
