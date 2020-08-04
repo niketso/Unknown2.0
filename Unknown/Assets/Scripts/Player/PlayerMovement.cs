@@ -8,16 +8,24 @@ public class PlayerMovement : MonoBehaviour
     private NavMeshAgent agent;
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
-    
+    private Vector3 playerPosition;
+    public bool moved = false;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         playerAnimator = GetComponent<PlayerAnimator>();
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = FindObjectOfType<PlayerController>();      
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     private void Arrived() //Activa la animacion segun que tipo de interactuable es
     {
+        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+        agent.isStopped = true;
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
@@ -28,6 +36,21 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.OpenDoor();
             playerController.isDoor = false; //evidentemente no sale de la animacion sin esta linea
         }
+        else if (playerController.isFuseBox)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isFuseBox = false;
+        }
+        else if (playerController.isFireAlarm)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isFireAlarm = false;
+        }
+        else if (playerController.isPuzzle)
+        {
+            playerAnimator.OpenDoor();
+            playerController.isPuzzle = false;
+        }
         else
         {
             playerAnimator.Idle();
@@ -36,32 +59,35 @@ public class PlayerMovement : MonoBehaviour
 
     public void Walk(Vector3 destination)
     {
+        agent.isStopped = false;     
         if (!playerAnimator.pickingUp)
-        {
+        {            
             agent.destination = destination;
             playerAnimator.Walk();
-        }
+            moved = true;   
+        }           
     }   
 
     private void Update()
-    {        
-        if (agent.remainingDistance < 0.1 && playerAnimator.pickingUp == false)
+    {
+        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+
+        if (moved == true && agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;            
+            Cursor.visible = true;
         }
-        else
+        else if (moved == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-           
+            Cursor.visible = false;           
         }
     }
+    
 
 
-
-
+    
 }
      
     

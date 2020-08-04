@@ -5,6 +5,8 @@ using UnityEngine;
 public class PipeManager : MonoBehaviour
 {
     public static PipeManager instance;
+    [SerializeField] GameObject puzzleUI;
+    [SerializeField] GameObject gate;
     [SerializeField] Pipe[] pipes;
 
     public static PipeManager Instance
@@ -39,6 +41,9 @@ public class PipeManager : MonoBehaviour
             
         {
             Debug.Log("GANASTE");
+            puzzleUI.SetActive(false);
+            gate.GetComponent<Animator>().SetTrigger("OpenGate");
+
         }
 
     }

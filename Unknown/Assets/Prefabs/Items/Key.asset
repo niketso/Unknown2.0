@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Key
   description: Use this to unlock the door
-  icon: {fileID: 21300000, guid: c88f93890a579e048a71b515d51dbaf9, type: 3}
+  icon: {fileID: 21300000, guid: fbae8bfe73c38ae4599c43745ac31c79, type: 3}

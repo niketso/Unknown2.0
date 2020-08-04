@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     }
     void CameraSet()
     {        
-        for (int i = 1; i < Camera.allCameras.Length; i++)
+        for (int i = 0; i < Camera.allCameras.Length; i++)
             Camera.allCameras[i].enabled = false;
         currentCam.enabled = true;
     }
