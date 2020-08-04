@@ -19,9 +19,7 @@ public class CarAlarm : MonoBehaviour
     void Update()
     {
         if (alarmOn)
-        {
-            //sonido
-            AudioManager.instance.Play("CarAlarm",true);
+        {                      
             zombie.GetComponent<NavMeshAgent>().SetDestination(destinationPosVec);
             zombie.GetComponent<Animator>().SetTrigger("Move");
             zombie.GetComponent<Animator>().SetBool("Walking",true);

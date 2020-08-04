@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = startingVolume;
         }
 
-        AudioManager.instance.Play("Music", true);
+       AudioManager.instance.Play("Music", true);
     }
 
     public void Play(string name, bool loop)
