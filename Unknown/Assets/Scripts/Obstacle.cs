@@ -11,8 +11,8 @@ public class Obstacle : MonoBehaviour
     [HideInInspector]
     public Vector3 stopingZonePos;
 
-   // [SerializeField]
-   // PopUpController popUpController;
+    [SerializeField]
+    PopUpController popUpController;
     [HideInInspector]
     public string playerSays = "The fire's blocking the exit";
     void Start()
@@ -25,13 +25,13 @@ public class Obstacle : MonoBehaviour
         {
             Debug.Log("entre");
             other.GetComponent<NavMeshAgent>().destination = destinationPos;
-            //popUpController.PlayerWindow(playerSays);
-            //Invoke("DisablePopUp", 3);
+            popUpController.PlayerWindow(playerSays);
+            Invoke("DisablePopUp", 3);
         }
     }
 
     void DisablePopUp()
     {
-        //popUpController.playerWindow.SetActive(false);
+        popUpController.playerWindow.SetActive(false);
     }
 }
