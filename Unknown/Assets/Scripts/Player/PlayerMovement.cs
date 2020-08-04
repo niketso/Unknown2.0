@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();      
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     private void Arrived() //Activa la animacion segun que tipo de interactuable es
     {
         //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
