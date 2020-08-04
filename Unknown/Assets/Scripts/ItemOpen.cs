@@ -24,12 +24,14 @@ public class ItemOpen : Interactable
         Debug.Log("OPEN");
         if (isLocked == false)
         {
-            popUpController.PlayerWindow(playerSays1);
-            Invoke("disablePopUp", 3);
+            //popUpController.PlayerWindow(playerSays1);
+            //Invoke("disablePopUp", 3);
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
+            AudioManager.instance.Play("DoorOpen", false);
         }
         else
         {
+            AudioManager.instance.Play("DoorLocked", false);
             popUpController.PlayerWindow(playerSays2);
             Invoke("disablePopUp", 3);
         }        
