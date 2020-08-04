@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParkingLotScene/TestScene 1.unity
     guid: cb701dc7d3092b14fb0d6051e959beda
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: a5be372892c02a941b9aa0044ec17a10
   m_configObjects: {}

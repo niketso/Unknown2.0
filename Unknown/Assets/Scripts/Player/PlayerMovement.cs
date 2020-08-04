@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
     private Vector3 playerPosition;
     public bool moved = false;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
