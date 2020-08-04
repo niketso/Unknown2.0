@@ -12,6 +12,8 @@ public class FireAlarm : Interactable
     GameObject stopingZone;
     [HideInInspector]
     public Vector3 stopingZonePos;
+    [SerializeField]
+    GameObject sprinklers;
 
     [SerializeField] 
     PopUpController popUpController;
@@ -33,16 +35,28 @@ public class FireAlarm : Interactable
         Debug.Log("Use fire alarm");
         if (isUsable == true)
         {
-            Destroy(fire);
+            sprinklers.SetActive(true);
+            Invoke("destroyFire", 2);
+            Invoke("disableSprinklers",4);
         }
         else
         {
-            popUpController.PlayerWindow(playerSays);           
+            popUpController.PlayerWindow(playerSays);                      
             Invoke("disablePopUp", 3);
         }
     }
     void disablePopUp()
     {
         popUpController.playerWindow.SetActive(false);
+    }
+
+    void disableSprinklers()
+    {
+        sprinklers.SetActive(false);
+    }
+
+    void destroyFire()
+    {
+        Destroy(fire);
     }
 }

@@ -9,8 +9,10 @@ public class ItemUse : Interactable
     GameObject stopingZone;
     [SerializeField]
     GameObject otherObject;
+    [HideInInspector]
     public Vector3 stopingZonePos;
-    
+
+
     [SerializeField]   
     PopUpController popUpController;    
     string playerSays = "The power is back!";
@@ -32,7 +34,7 @@ public class ItemUse : Interactable
     {
         Debug.Log("USE");
         //habilitar alarma
-        otherObject.GetComponent<FireAlarm>().isUsable = true;
+        otherObject.GetComponent<FireAlarm>().isUsable = true;        
 
         popUpController.PlayerWindow(playerSays);
         Invoke("disablePopUp", 3);
@@ -50,4 +52,5 @@ public class ItemUse : Interactable
     {
         popUpController.playerWindow.SetActive(false);
     }
+
 }
