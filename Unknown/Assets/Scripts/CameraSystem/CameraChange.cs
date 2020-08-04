@@ -10,7 +10,11 @@ public class CameraChange : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        cc.currentCam = cam;
-        cc.CameraEnable();
+        if (other.tag == "Player")
+        {
+            cc.currentCam = cam;
+            cc.CameraEnable();
+        }
+
     }
 }
