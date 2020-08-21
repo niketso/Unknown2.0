@@ -43,6 +43,7 @@ public class PipeManager : MonoBehaviour
             Debug.Log("GANASTE");
             puzzleUI.SetActive(false);
             gate.GetComponent<Animator>().SetTrigger("OpenGate");
+            AudioManager.instance.Play("GateOpen",false);
 
         }
 

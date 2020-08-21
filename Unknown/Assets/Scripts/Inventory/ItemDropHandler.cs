@@ -40,6 +40,7 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
                     if (hit.transform.name == "Car")
                     {
                         // Debug.Log("es puerta y esta locked");
+                        AudioManager.instance.Play("CarAlarm", true);
                         hit.transform.GetComponent<CarAlarm>().TurnOnAlarm();
                         Inventory.instance.RemoveItem(item);
                     }

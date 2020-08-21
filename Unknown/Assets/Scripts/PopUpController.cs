@@ -14,6 +14,8 @@ public class PopUpController : MonoBehaviour
     {
         playerWindow.SetActive(false);
         mouseOverWindow.SetActive(false);
+
+        AudioManager.instance.Play("Music", true);
     } 
 
     public void PlayerWindow(string _text)

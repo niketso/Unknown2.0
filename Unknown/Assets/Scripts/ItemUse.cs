@@ -33,9 +33,12 @@ public class ItemUse : Interactable
     public void Use()
     {
         Debug.Log("USE");
+        //sonidos
+        AudioManager.instance.Play("SwitchFlip",false);
+        AudioManager.instance.Play("PowerOn", false);
         //habilitar alarma
-        otherObject.GetComponent<FireAlarm>().isUsable = true;        
-
+        otherObject.GetComponent<FireAlarm>().isUsable = true;
+        //texto
         popUpController.PlayerWindow(playerSays);
         Invoke("disablePopUp", 3);
     }

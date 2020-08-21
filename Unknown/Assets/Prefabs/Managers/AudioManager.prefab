@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5f76b563bb4cc4fbb9ec6fa201fe2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingVolume: 0.2
+  startingVolume: 0.242
   sounds:
   - name: Music
     clip: {fileID: 8300000, guid: cb712f26cb7fee244bb9c373965845e0, type: 3}

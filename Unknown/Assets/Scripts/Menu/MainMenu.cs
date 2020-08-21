@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     {
                
         volumeSlider.value = AudioManager.instance.startingVolume;
-       // AudioManager.instance.Play("MusicMenu", true); musica de menu.
+        AudioManager.instance.Play("MenuMusic", true); 
     }
 
     public void PlaySound()

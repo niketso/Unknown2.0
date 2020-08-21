@@ -36,8 +36,10 @@ public class FireAlarm : Interactable
         if (isUsable == true)
         {
             sprinklers.SetActive(true);
+            AudioManager.instance.Play("FireAlarm",false);
+            AudioManager.instance.Play("FireOff", false);
             Invoke("destroyFire", 2);
-            Invoke("disableSprinklers",4);
+            Invoke("disableSprinklers",6);
         }
         else
         {

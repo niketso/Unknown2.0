@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
     private Vector3 playerPosition;
     public bool moved = false;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     private void Arrived() //Activa la animacion segun que tipo de interactuable es
     {
         //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+        if (AudioManager.instance.SoundPlaying("StepsConcrete"))
+        {
+            AudioManager.instance.StopSound("StepsConcrete");
+        }
+        
         agent.isStopped = true;
         if (playerController.isObj)
         {
@@ -64,7 +70,8 @@ public class PlayerMovement : MonoBehaviour
         {            
             agent.destination = destination;
             playerAnimator.Walk();
-            moved = true;   
+            moved = true;
+            AudioManager.instance.Play("StepsConcrete", true);
         }           
     }   
 
