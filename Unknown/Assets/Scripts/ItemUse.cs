@@ -34,8 +34,8 @@ public class ItemUse : Interactable
     {
         Debug.Log("USE");
         //sonidos
-        AudioManager.instance.Play("SwitchFlip",false);
-        AudioManager.instance.Play("PowerOn", false);
+       // AudioManager.instance.Play("SwitchFlip",false);
+       // AudioManager.instance.Play("PowerOn", false);
         //habilitar alarma
         otherObject.GetComponent<FireAlarm>().isUsable = true;
         //texto

@@ -34,6 +34,8 @@ public class SceneLoaderManager : MonoBehaviour
     private IEnumerator ChangingLevel()
     {
         yield return new WaitForSeconds(0.5f);
+        AudioManager.instance.StopSound("MenuMusic");
+        AudioManager.instance.Play("AmbientHorror", true);
         SceneManager.LoadScene(levelName);
     }
 
