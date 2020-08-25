@@ -13,9 +13,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-               
-        volumeSlider.value = AudioManager.instance.startingVolume;
-        AudioManager.instance.Play("MenuMusic", true); 
+      
     }
 
     public void PlaySound()
@@ -25,6 +23,7 @@ public class MainMenu : MonoBehaviour
 
     public void OptionsMenu()
     {
+        volumeSlider.value = AudioManager.instance.startingVolume;
         MainMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(true);
 

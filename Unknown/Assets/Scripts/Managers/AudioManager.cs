@@ -1,9 +1,9 @@
-﻿using UnityEngine.Audio;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
     [Range(0f, 1f)]
     [SerializeField] public float startingVolume;
 
@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+
     private void Awake()
     {
         instance = this;
@@ -35,10 +36,13 @@ public class AudioManager : MonoBehaviour
             startingVolume = PlayerPrefs.GetFloat("volume");
         }
 
+        DontDestroyOnLoad(this.gameObject);
+
     }
 
     private void Start()
     {
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -46,7 +50,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = startingVolume;
         }
 
-       
+        AudioManager.instance.Play("MenuMusic", true);
     }
 
     public void Play(string name, bool loop)
@@ -59,7 +63,7 @@ public class AudioManager : MonoBehaviour
                 s.source.loop = loop;
                 s.source.Play();
 
-                //Debug.Log("Reproducciendo sonido" + s.clip.name +"A este volumen:" + s.source.volume);
+                Debug.Log("Reproducciendo sonido" + s.clip.name +" A este volumen:" + s.source.volume);
             }
         }
     }
@@ -94,7 +98,9 @@ public class AudioManager : MonoBehaviour
         {
             if (s.name == name)
             {
+                s.source.loop = false;
                 s.source.Stop();
+               // Debug.Log("Deteniendo sonido" + s.clip.name + " A este volumen:" + s.source.volume);
             }
         }
     }

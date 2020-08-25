@@ -10,12 +10,10 @@ public class PopUpController : MonoBehaviour
     [SerializeField]
     public GameObject mouseOverWindow;
 
-    void Start()
+    private void Start()
     {
         playerWindow.SetActive(false);
-        mouseOverWindow.SetActive(false);
-
-        AudioManager.instance.Play("Music", true);
+        mouseOverWindow.SetActive(false);     
     } 
 
     public void PlayerWindow(string _text)
