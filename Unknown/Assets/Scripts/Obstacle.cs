@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         destinationPos = new Vector3(destination.transform.position.x, destination.transform.position.y, destination.transform.position.z);
-        //AudioManager.instance.Play("Fire",true);
+        AudioManager.instance.Play("Fire",true);
     }
     private void OnTriggerEnter(Collider other)
     {

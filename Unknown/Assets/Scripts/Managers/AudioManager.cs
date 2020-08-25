@@ -100,7 +100,7 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.loop = false;
                 s.source.Stop();
-                Debug.Log("Deteniendo sonido" + s.clip.name + " A este volumen:" + s.source.volume);
+               // Debug.Log("Deteniendo sonido" + s.clip.name + " A este volumen:" + s.source.volume);
             }
         }
     }

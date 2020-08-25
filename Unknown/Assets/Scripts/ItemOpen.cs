@@ -32,11 +32,11 @@ public class ItemOpen : Interactable
             //popUpController.PlayerWindow(playerSays1);
             //Invoke("disablePopUp", 3);
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
-            //AudioManager.instance.Play("DoorOpen", false);
+            AudioManager.instance.Play("DoorOpen", false);
         }
         else
         {
-            //AudioManager.instance.Play("DoorLocked", false);
+            AudioManager.instance.Play("DoorLocked", false);
             popUpController.PlayerWindow(playerSays2);
             Invoke("disablePopUp", 3);
         }        
