@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
     private Vector3 playerPosition;
-    public bool moved = false;
+    public bool moving = false;
 
     private void Awake()
     {
@@ -22,25 +22,28 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        agent.isStopped = true;
     }
-    private void Arrived() //Activa la animacion segun que tipo de interactuable es
+    private void Arrived() 
     {
-        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+        Debug.Log("Llego");
         if (AudioManager.instance.SoundPlaying("StepsConcrete"))
         {
             AudioManager.instance.StopSound("StepsConcrete");
         }
         
         agent.isStopped = true;
+
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
-            playerController.isObj = false; //esto por que era? Asi lo comentamos bien. 
+            playerController.isObj = false; 
         }
         else if (playerController.isDoor)
         {
             playerAnimator.OpenDoor();
-            playerController.isDoor = false; //evidentemente no sale de la animacion sin esta linea
+            playerController.isDoor = false; 
         }
         else if (playerController.isFuseBox)
         {
@@ -67,10 +70,11 @@ public class PlayerMovement : MonoBehaviour
     {
         agent.isStopped = false;     
         if (!playerAnimator.pickingUp)
-        {            
+        {
+            Debug.Log("walking");
             agent.destination = destination;
             playerAnimator.Walk();
-            moved = true;
+            moving = true;
             AudioManager.instance.Play("StepsConcrete", true);
         }           
     }   
@@ -80,10 +84,10 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
         if (agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
         {
-            moved = false;
+            moving = false;
         }
 
-        if (!moved)
+        if (!moving)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;

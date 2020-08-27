@@ -5,9 +5,9 @@ using UnityEngine.AI;
 public class CarAlarm : MonoBehaviour
 {
     public bool alarmOn = false;
-    [SerializeField] GameObject zombie;
-    [SerializeField] GameObject zombieObstacle;
-    [SerializeField] GameObject destinationPos;
+    [SerializeField] GameObject zombie = null;
+    [SerializeField] GameObject zombieObstacle = null;
+    [SerializeField] GameObject destinationPos = null;
     private Vector3 destinationPosVec;
     float dist;
 

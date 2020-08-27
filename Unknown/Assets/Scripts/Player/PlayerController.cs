@@ -34,22 +34,28 @@ public class PlayerController : MonoBehaviour
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
                 if (!EventSystem.current.IsPointerOverGameObject())
-                {                    
+                {
                     if (interactable != null)
-                    {                     
-                            SetFocus(interactable);                                               
+                    {
+                        Debug.Log("interactable, " + interactable.name);
+                        SetFocus(interactable);
                     }
                     else
                     {
                         if (hit.transform.gameObject.CompareTag("Destination"))
                         {
+                            Debug.Log("destinatination " + hit.transform.name);
                             destination = hit.point;
                             player.GetComponent<PlayerMovement>().Walk(destination);
-                            isObj = false; // es necesaria esta linea?
+                           // isObj = false; // es necesaria esta linea?
                             RemoveFocus();
                         }
                     }
-                }            
+                }
+                else
+                {
+                    Debug.Log("Click dentro del HUD");
+                }           
             }
         }
     }
@@ -64,51 +70,33 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-            //Esto es para que no frene tan lejos
+
+            destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+            player.GetComponent<PlayerMovement>().Walk(destination);
+
             if (newFocus.tag == "FuseBox")
-            {
-                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
+            {                
                 isFuseBox = true;
             }
             else if (newFocus.tag == "FireAlarm")
-            {
-                destination = newFocus.GetComponent<FireAlarm>().stopingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
+            {                
                 isFireAlarm = true;
             }
             else if (newFocus.tag == "Object")
-            {
-                destination = newFocus.GetComponent<ItemPickup>().stopingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
+            {                
                 isObj = true;
             }
             else if (newFocus.tag == "Puzzle")
-            {
-                destination = newFocus.GetComponent<PuzzleItem>().stoppingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
+            {                
                 isPuzzle = true;
             }
             else if (newFocus.tag == "Door")
-            {
-                destination = newFocus.GetComponent<ItemOpen>().stoppingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
+            {                
                 isDoor = true;
             }
-            else
-            {
-                destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
-                player.GetComponent<PlayerMovement>().Walk(destination);
-            }
 
-            //Chequea que tipo de Interactable es
-            // if (newFocus.tag == "Door")
-               // isDoor = true; //Para cuando este la animacion de la puerta
-
-        }
-   
-        newFocus.OnFocused(player.transform);
-                
+        }   
+        newFocus.OnFocused(player.transform);                
     }
 
     void RemoveFocus()

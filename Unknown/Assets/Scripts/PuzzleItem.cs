@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PuzzleItem : Interactable
 {
-    [SerializeField] GameObject stoppingZone;
-    [SerializeField] GameObject puzzleUI;
-    [SerializeField] GameObject zombieObstacle;
+    [SerializeField] GameObject stoppingZone = null;
+    [SerializeField] GameObject puzzleUI = null ;
+    [SerializeField] GameObject zombieObstacle = null;
     public Vector3 stoppingZonePos;
 
     private void Start()

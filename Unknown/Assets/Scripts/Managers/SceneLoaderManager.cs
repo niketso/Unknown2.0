@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoaderManager : MonoBehaviour
 {
 
-    [SerializeField] private string levelName;
+    [SerializeField] private string levelName = null;
         
     public void ChangeLevel()
     {

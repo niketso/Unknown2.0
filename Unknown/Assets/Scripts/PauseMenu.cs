@@ -7,10 +7,10 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseMenuUI;
-    [SerializeField] private GameObject optionsMenuUI;
-    [SerializeField] private GameObject inventoryMenuUI;
-    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private GameObject pauseMenuUI = null;
+    [SerializeField] private GameObject optionsMenuUI = null;
+    [SerializeField] private GameObject inventoryMenuUI = null;
+    [SerializeField] private Slider volumeSlider = null;
     public static bool gameIsPaused = false;
 
     private void Start()

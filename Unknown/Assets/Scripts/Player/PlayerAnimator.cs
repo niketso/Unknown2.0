@@ -52,8 +52,7 @@ public class PlayerAnimator : MonoBehaviour
 
     //evento de animacion pickUpFront();
     public void PickUpNow()
-    {
-        // FindObjectOfType<Interactable>().PickUpItem();            
+    {                  
         playerController.focus.PickUpItem();       
     }
 
