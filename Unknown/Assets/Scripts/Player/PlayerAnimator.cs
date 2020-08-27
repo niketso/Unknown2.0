@@ -40,8 +40,9 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void Walk()
     {
-        playerAnimator.SetBool("Moving", true);
+        Debug.Log("walk_Anim");
         playerAnimator.SetBool("Idle", false);
+        playerAnimator.SetBool("Moving", true);
     }
     public void PickUpFront()
     {        

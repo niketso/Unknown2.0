@@ -23,18 +23,16 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        agent.isStopped = true;
+        //agent.isStopped = true;
     }
     private void Arrived() 
     {
-        Debug.Log("Llego");
+        //Debug.Log("Llego");
         if (AudioManager.instance.SoundPlaying("StepsConcrete"))
         {
             AudioManager.instance.StopSound("StepsConcrete");
         }
-        
-        agent.isStopped = true;
-
+               
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
@@ -68,11 +66,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void Walk(Vector3 destination)
     {
-        agent.isStopped = false;     
+        //agent.isStopped = false;
+        //Debug.Log("agent.isStopped = "+ agent.isStopped);
         if (!playerAnimator.pickingUp)
         {
-            Debug.Log("walking");
-            agent.destination = destination;
+            // agent.destination = destination;
+            agent.SetDestination(destination);
+            Debug.Log("agent should be moving," + " current destination "+ agent.destination);
             playerAnimator.Walk();
             moving = true;
             AudioManager.instance.Play("StepsConcrete", true);
@@ -82,8 +82,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
-        if (agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
+        //Debug.Log("agent.isStopped = " + agent.isStopped);
+        if (agent.remainingDistance <= 0.1 /*&& playerAnimator.pickingUp == false*/)
         {
+           // agent.isStopped = true;
             moving = false;
         }
 

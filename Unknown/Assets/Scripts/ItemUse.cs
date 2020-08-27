@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ItemUse : Interactable
 {
     [SerializeField]
-    GameObject stopingZone = null;
+    public GameObject stopingZone;
     [SerializeField]
     GameObject otherObject = null;
     [HideInInspector]

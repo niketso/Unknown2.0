@@ -71,27 +71,36 @@ public class PlayerController : MonoBehaviour
 
             focus = newFocus;
 
-            destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
-            player.GetComponent<PlayerMovement>().Walk(destination);
+            
 
             if (newFocus.tag == "FuseBox")
-            {                
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
                 isFuseBox = true;
             }
             else if (newFocus.tag == "FireAlarm")
-            {                
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
                 isFireAlarm = true;
             }
             else if (newFocus.tag == "Object")
-            {                
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
                 isObj = true;
             }
             else if (newFocus.tag == "Puzzle")
-            {                
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
                 isPuzzle = true;
             }
             else if (newFocus.tag == "Door")
-            {                
+            {
+                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                player.GetComponent<PlayerMovement>().Walk(destination);
                 isDoor = true;
             }
 
