@@ -24,69 +24,32 @@ public class PlayerController : MonoBehaviour
         rayCamera = cc.currentCam;
         Ray ray = rayCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        
-
+       
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
 
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                //Player Movement
-                if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
-                {                    
-                    destination = hit.point;
-                    player.GetComponent<PlayerMovement>().Walk(destination);
-                    isObj = false; // es necesaria esta linea?
-                    RemoveFocus();
-                }
-                //Player interaction with objects
-               if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
-               {
 
+            if (Physics.Raycast(ray, out hit, 100))
+            {               
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
-                }
-
-                //Door Open
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Door" && !EventSystem.current.IsPointerOverGameObject())
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {                    
                     if (interactable != null)
-                    {
-                        SetFocus(interactable);
+                    {                     
+                            SetFocus(interactable);                                               
                     }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FireAlarm" && !EventSystem.current.IsPointerOverGameObject())
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
+                    else
                     {
-                        SetFocus(interactable);
+                        if (hit.transform.gameObject.CompareTag("Destination"))
+                        {
+                            destination = hit.point;
+                            player.GetComponent<PlayerMovement>().Walk(destination);
+                            isObj = false; // es necesaria esta linea?
+                            RemoveFocus();
+                        }
                     }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FuseBox" && !EventSystem.current.IsPointerOverGameObject())
-                {                  
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Puzzle" && !EventSystem.current.IsPointerOverGameObject())
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
-                }
+                }            
             }
         }
     }

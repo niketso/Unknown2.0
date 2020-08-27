@@ -38,11 +38,6 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-    }
-
-    private void Start()
-    {
-
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -50,6 +45,10 @@ public class AudioManager : MonoBehaviour
             s.source.volume = startingVolume;
         }
 
+    }
+
+    private void Start()
+    {
         AudioManager.instance.Play("MenuMusic", true);
     }
 

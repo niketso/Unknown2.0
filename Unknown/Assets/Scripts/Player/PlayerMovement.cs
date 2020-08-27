@@ -78,14 +78,18 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+        if (agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
+        {
+            moved = false;
+        }
 
-        if (moved == true && agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
+        if (!moved)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (moved == true)
+        else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;           

@@ -7,7 +7,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private GameObject player;
     private Animator playerAnimator;
-    [SerializeField] private PlayerController playerController;
+    [SerializeField] private PlayerController playerController = null;
     public bool pickingUp;
 
     void Awake()
