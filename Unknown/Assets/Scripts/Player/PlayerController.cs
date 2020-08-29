@@ -27,14 +27,13 @@ public class PlayerController : MonoBehaviour
        
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
-
-
             if (Physics.Raycast(ray, out hit, 100))
             {               
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
 
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+
                     if (interactable != null)
                     {
                         Debug.Log("interactable, " + interactable.name);
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
                             Debug.Log("destinatination " + hit.transform.name);
                             destination = hit.point;
                             player.GetComponent<PlayerMovement>().Walk(destination);
-                           // isObj = false; // es necesaria esta linea?
+                            isObj = false; // es necesaria esta linea?
                             RemoveFocus();
                         }
                     }
@@ -55,12 +54,14 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     Debug.Log("Click dentro del HUD");
+                    if(focus != null)
+                        Debug.Log("Focus" + focus.name);
                 }           
             }
         }
     }
 
-    void SetFocus(Interactable newFocus)
+    public void SetFocus(Interactable newFocus)
     {
         if (newFocus != focus)
         {
@@ -70,9 +71,7 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-
-            
-
+           
             if (newFocus.tag == "FuseBox")
             {
                 destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
@@ -81,30 +80,31 @@ public class PlayerController : MonoBehaviour
             }
             else if (newFocus.tag == "FireAlarm")
             {
-                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                destination = newFocus.GetComponent<FireAlarm>().stopingZonePos;
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isFireAlarm = true;
             }
             else if (newFocus.tag == "Object")
             {
-                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                destination = newFocus.GetComponent<ItemPickup>().stopingZonePos;
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isObj = true;
             }
             else if (newFocus.tag == "Puzzle")
             {
-                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                destination = newFocus.GetComponent<PuzzleItem>().stoppingZonePos;
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isPuzzle = true;
             }
             else if (newFocus.tag == "Door")
             {
-                destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
+                destination = newFocus.GetComponent<ItemOpen>().stoppingZonePos;
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isDoor = true;
             }
 
-        }   
+        }
+        
         newFocus.OnFocused(player.transform);                
     }
 
