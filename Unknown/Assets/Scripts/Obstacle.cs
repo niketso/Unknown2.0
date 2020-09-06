@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
     public Vector3 stopingZonePos;
 
     [SerializeField]
-    PopUpController popUpController;
+    PopUpController popUpController = null;
     [HideInInspector]
     public string playerSays = "The fire's blocking the exit";
     void Start()

@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class ItemUse : Interactable
 {
     [SerializeField]
-    GameObject stopingZone;
+    public GameObject stopingZone;
     [SerializeField]
-    GameObject otherObject;
+    GameObject otherObject = null;
     [HideInInspector]
     public Vector3 stopingZonePos;
 
 
     [SerializeField]   
-    PopUpController popUpController;    
+    PopUpController popUpController = null;    
     string playerSays = "The power is back!";
 
     public bool canUse = false;

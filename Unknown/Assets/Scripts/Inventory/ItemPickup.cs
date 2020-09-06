@@ -3,8 +3,7 @@
 public class ItemPickup : Interactable
 {
     public Item item;
-    [SerializeField]
-    GameObject stopingZone;
+    [SerializeField] GameObject stopingZone = null;
     public Vector3 stopingZonePos;
 
     void Start()

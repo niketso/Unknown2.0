@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 
 public class PlayerController : MonoBehaviour
@@ -24,74 +25,36 @@ public class PlayerController : MonoBehaviour
         rayCamera = cc.currentCam;
         Ray ray = rayCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        
-
+       
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
-
             if (Physics.Raycast(ray, out hit, 100))
-            {
-                //Player Movement
-                if (hit.transform.tag == "Destination" && !EventSystem.current.IsPointerOverGameObject())
-                {                    
-                    destination = hit.point;
-                    player.GetComponent<PlayerMovement>().Walk(destination);
-                    isObj = false; // es necesaria esta linea?
-                    RemoveFocus();
-                }
-                //Player interaction with objects
-               if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Object" && !EventSystem.current.IsPointerOverGameObject())
-               {
+            {               
 
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-
-                if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
-                }
-
-                //Door Open
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Door" && !EventSystem.current.IsPointerOverGameObject())
+                if (!EventSystem.current.IsPointerOverGameObject())
                 {
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
+
                     if (interactable != null)
-                    {
+                    {                        
                         SetFocus(interactable);
                     }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FireAlarm" && !EventSystem.current.IsPointerOverGameObject())
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
+                    else
                     {
-                        SetFocus(interactable);
-                    }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "FuseBox" && !EventSystem.current.IsPointerOverGameObject())
-                {                  
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
-                    {
-                        SetFocus(interactable);
-                    }
-                }
-
-                if (hit.collider.GetComponent<Interactable>() && hit.transform.tag == "Puzzle" && !EventSystem.current.IsPointerOverGameObject())
-                {
-                    Interactable interactable = hit.collider.GetComponent<Interactable>();
-                    if (interactable != null)
-                    {
-                        SetFocus(interactable);
+                        if (hit.transform.gameObject.CompareTag("Destination"))
+                        {                           
+                            destination = hit.point;                            
+                            player.GetComponent<PlayerMovement>().Walk(destination);
+                            isObj = false;
+                            RemoveFocus();
+                        }
                     }
                 }
             }
         }
     }
 
-    void SetFocus(Interactable newFocus)
+    public void SetFocus(Interactable newFocus)
     {
         if (newFocus != focus)
         {
@@ -101,7 +64,7 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
-            //Esto es para que no frene tan lejos
+           
             if (newFocus.tag == "FuseBox")
             {
                 destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
@@ -132,20 +95,10 @@ public class PlayerController : MonoBehaviour
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isDoor = true;
             }
-            else
-            {
-                destination = newFocus.transform.position + new Vector3(-0.5f, 0, 0);
-                player.GetComponent<PlayerMovement>().Walk(destination);
-            }
-
-            //Chequea que tipo de Interactable es
-            // if (newFocus.tag == "Door")
-               // isDoor = true; //Para cuando este la animacion de la puerta
 
         }
-   
-        newFocus.OnFocused(player.transform);
-                
+        
+        newFocus.OnFocused(player.transform);                
     }
 
     void RemoveFocus()

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
     private Vector3 playerPosition;
-    public bool moved = false;
+    public bool moving = false;
 
     private void Awake()
     {
@@ -21,26 +21,24 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.visible = true;        
     }
-    private void Arrived() //Activa la animacion segun que tipo de interactuable es
-    {
-        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+    private void Arrived() 
+    {               
         if (AudioManager.instance.SoundPlaying("StepsConcrete"))
         {
             AudioManager.instance.StopSound("StepsConcrete");
         }
-        
-        agent.isStopped = true;
+               
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
-            playerController.isObj = false; //esto por que era? Asi lo comentamos bien. 
+            playerController.isObj = false; 
         }
         else if (playerController.isDoor)
         {
             playerAnimator.OpenDoor();
-            playerController.isDoor = false; //evidentemente no sale de la animacion sin esta linea
+            playerController.isDoor = false; 
         }
         else if (playerController.isFuseBox)
         {
@@ -65,27 +63,31 @@ public class PlayerMovement : MonoBehaviour
 
     public void Walk(Vector3 destination)
     {
-        agent.isStopped = false;     
-        if (!playerAnimator.pickingUp)
-        {            
-            agent.destination = destination;
-            playerAnimator.Walk();
-            moved = true;
+        agent.isStopped = false;      
+        if(!playerAnimator.pickingUp)
+        {
+            moving = true;
+            agent.SetDestination(destination);
+            playerAnimator.Walk();           
             AudioManager.instance.Play("StepsConcrete", true);
         }           
     }   
 
     private void Update()
     {
-        //Debug.Log("Remaining Distance>> " + agent.remainingDistance);
+        if (moving && agent.remainingDistance <= 0.01)
+        {            
+            agent.isStopped = true;            
+            moving = false;
+        }
 
-        if (moved == true && agent.remainingDistance <= 0.1 && playerAnimator.pickingUp == false)
+        if (!moving)
         {
             Arrived();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (moved == true)
+        else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;           

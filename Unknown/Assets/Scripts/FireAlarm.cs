@@ -7,16 +7,16 @@ public class FireAlarm : Interactable
 {
     public bool isUsable = false;
     [SerializeField]
-    GameObject fire;
+    GameObject fire = null;
     [SerializeField]
-    GameObject stopingZone;
+    GameObject stopingZone = null;
     [HideInInspector]
     public Vector3 stopingZonePos;
     [SerializeField]
-    GameObject sprinklers;
+    GameObject sprinklers = null;
 
     [SerializeField] 
-    PopUpController popUpController;
+    PopUpController popUpController = null;
 
     string playerSays = "There's no power!";
     void Start()

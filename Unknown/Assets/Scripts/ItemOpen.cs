@@ -7,12 +7,12 @@ public class ItemOpen : Interactable
 {
     [SerializeField]
     public bool isLocked;
-    [SerializeField] GameObject stoppingZone;
+    [SerializeField] GameObject stoppingZone = null;
     public Vector3 stoppingZonePos;
     [SerializeField]
-    PopUpController popUpController;
-    string playerSays1 = "It's Opened!";
-    string playerSays2 = "It's Locked!";
+    PopUpController popUpController = null;
+    public string playerSays1 = "It's Opened!";
+    public string  playerSays2 = "It's Locked!";
 
     private void Start()
     {

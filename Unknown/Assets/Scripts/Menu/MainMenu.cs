@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject MainMenuUI;
-    [SerializeField] private GameObject OptionsMenuUI;
-    [SerializeField] private GameObject CreditsMenuUI;
-    [SerializeField] private Slider volumeSlider;
-    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private GameObject MainMenuUI = null;
+    [SerializeField] private GameObject OptionsMenuUI = null ;
+    [SerializeField] private GameObject CreditsMenuUI = null ;
+    [SerializeField] private Slider volumeSlider = null;
+    [SerializeField] public Toggle fullscreenToggle = null;
 
 
 

@@ -5,9 +5,9 @@ using UnityEngine;
 public class PipeManager : MonoBehaviour
 {
     public static PipeManager instance;
-    [SerializeField] GameObject puzzleUI;
-    [SerializeField] GameObject gate;
-    [SerializeField] Pipe[] pipes;
+    [SerializeField] GameObject puzzleUI = null;
+    [SerializeField] GameObject gate = null;
+    [SerializeField] Pipe[] pipes = null;
 
     public static PipeManager Instance
     {

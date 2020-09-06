@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MouseOver : MonoBehaviour
 {
     [SerializeField]
-    PopUpController popUpController;
+    PopUpController popUpController = null;
     string itemText;
    
     void Start()

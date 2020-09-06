@@ -12,7 +12,7 @@ public enum Directions
 }
 public class Pipe : MonoBehaviour
 {
-    [SerializeField] private Button button;
+    [SerializeField] private Button button = null;
     [SerializeField] public Directions startingDirection;
     public Directions currentDirection;
     [SerializeField] public Directions correctDirection;
