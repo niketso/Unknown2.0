@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 
 public class PlayerController : MonoBehaviour
@@ -35,28 +36,20 @@ public class PlayerController : MonoBehaviour
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
 
                     if (interactable != null)
-                    {
-                        Debug.Log("interactable, " + interactable.name);
+                    {                        
                         SetFocus(interactable);
                     }
                     else
                     {
                         if (hit.transform.gameObject.CompareTag("Destination"))
-                        {
-                            Debug.Log("destinatination " + hit.transform.name);
-                            destination = hit.point;
+                        {                           
+                            destination = hit.point;                            
                             player.GetComponent<PlayerMovement>().Walk(destination);
-                            isObj = false; // es necesaria esta linea?
+                            isObj = false;
                             RemoveFocus();
                         }
                     }
                 }
-                else
-                {
-                    Debug.Log("Click dentro del HUD");
-                    if(focus != null)
-                        Debug.Log("Focus" + focus.name);
-                }           
             }
         }
     }

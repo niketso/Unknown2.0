@@ -61,8 +61,6 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.loop = loop;
                 s.source.Play();
-
-               // Debug.Log("Reproducciendo sonido" + s.clip.name +" A este volumen:" + s.source.volume);
             }
         }
     }
