@@ -50,18 +50,23 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("PickUpFront");        
     }
-
-    //evento de animacion pickUpFront();
-    public void PickUpNow()
-    {                  
-        playerController.focus.PickUpItem();       
-    }
-
     public void OpenDoor()
     {
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("OpenDoor");
     }
+
+    //evento de animacion pickUpFront();
+    public void PickUpNow()
+    {                  
+        playerController.focus.PickUpItem();       
+    }
+    //evento de animacion OpenDoor();
+    public void OpenNow()
+    {
+        playerController.focus.OpenDoor();
+    }
+
 
 }
