@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI; 
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
     private Vector3 playerPosition;
     public bool moving = false;
+    private float rotationSpeed = 1f;
 
     private void Awake()
     {
@@ -29,9 +30,11 @@ public class PlayerMovement : MonoBehaviour
         {
             AudioManager.instance.StopSound("StepsConcrete");
         }
+                
                
         if (playerController.isObj)
         {
+            //RotateTowards(playerController.focus.gameObject.transform);
             playerAnimator.PickUpFront();
             playerController.isObj = false; 
         }
@@ -78,11 +81,15 @@ public class PlayerMovement : MonoBehaviour
         if (moving && agent.remainingDistance <= 0.01)
         {            
             agent.isStopped = true;            
-            moving = false;
+            moving = false;            
         }
 
         if (!moving)
         {
+            
+            if(playerController.focus!=null)
+                iTween.RotateTo(agent.gameObject, playerController.focus.transform.position, rotationSpeed);
+            //RotateTowards(playerController.focus.gameObject.transform);
             Arrived();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -93,10 +100,15 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = false;           
         }
     }
-    
+
+    public void RotateTowards(Transform target)
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+    }
 
 
-    
 }
      
     
