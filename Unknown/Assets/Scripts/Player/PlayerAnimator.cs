@@ -40,7 +40,6 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void Walk()
     {
-        Debug.Log("walk_Anim");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
     }

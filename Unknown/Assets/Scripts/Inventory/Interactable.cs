@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
             //Debug.Log("distance>> " + distance + " / radius>> " + radius);            
             if (distance <= radius)
             {
-                Debug.Log("Interacting with " + transform.name);
+                //Debug.Log("Interacting with " + transform.name);
                 Interact();
 
                 hasInteracted = true;

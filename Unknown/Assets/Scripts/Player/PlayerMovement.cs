@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         playerAnimator = GetComponent<PlayerAnimator>();
-        playerController = FindObjectOfType<PlayerController>();      
+        playerController = FindObjectOfType<PlayerController>();
+        playerPosition = this.transform.position;      
     }
 
     private void Start()
@@ -34,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
                
         if (playerController.isObj)
         {
-            //RotateTowards(playerController.focus.gameObject.transform);
             playerAnimator.PickUpFront();
             playerController.isObj = false; 
         }
@@ -86,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (!moving)
         {
-            
-            if(playerController.focus!=null)
-                iTween.RotateTo(agent.gameObject, playerController.focus.transform.position, rotationSpeed);
+
+            if (playerController.focus != null)
+                iTween.LookTo(this.gameObject, playerController.focus.transform.position, 1);
 
             Arrived();
             Cursor.lockState = CursorLockMode.None;
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;           
+            Cursor.visible = false;         
         }
     }
 }
