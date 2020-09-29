@@ -65,7 +65,8 @@ public class PlayerAnimator : MonoBehaviour
     //evento de animacion OpenDoor();
     public void OpenNow()
     {
-        playerController.focus.OpenDoor();
+        if(playerController.focus.tag == "Door")
+            playerController.focus.OpenDoor();
     }
 
 
