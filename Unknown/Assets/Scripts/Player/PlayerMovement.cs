@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             
             if(playerController.focus!=null)
                 iTween.RotateTo(agent.gameObject, playerController.focus.transform.position, rotationSpeed);
-            //RotateTowards(playerController.focus.gameObject.transform);
+
             Arrived();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -100,15 +100,6 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = false;           
         }
     }
-
-    public void RotateTowards(Transform target)
-    {
-        Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
-    }
-
-
 }
      
     
