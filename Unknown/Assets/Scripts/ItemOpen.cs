@@ -21,7 +21,7 @@ public class ItemOpen : Interactable
     public override void Interact()
     {
         base.Interact();
-        Open();
+        //Open();
     }
 
     public void Open()
@@ -46,4 +46,6 @@ public class ItemOpen : Interactable
     {
         popUpController.playerWindow.SetActive(false);
     }
+
+
 }

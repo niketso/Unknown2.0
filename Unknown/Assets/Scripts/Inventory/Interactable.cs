@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
             //Debug.Log("distance>> " + distance + " / radius>> " + radius);            
             if (distance <= radius)
             {
-                Debug.Log("Interacting with " + transform.name);
+                //Debug.Log("Interacting with " + transform.name);
                 Interact();
 
                 hasInteracted = true;
@@ -55,11 +55,15 @@ public class Interactable : MonoBehaviour
         //cada objecto interactua de manera especifica.
         //Debug.Log("Interacting with " + transform.name);
     }
-
-    
+        
     public void PickUpItem()
     {
         gameObject.GetComponent<ItemPickup>().PickUp();
         Destroy(gameObject);
+    }
+
+    public void OpenDoor()
+    {
+        gameObject.GetComponent<ItemOpen>().Open();
     }          
 }

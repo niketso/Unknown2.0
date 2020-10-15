@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI; 
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
     private Vector3 playerPosition;
     public bool moving = false;
+    private float rotationSpeed = 1f;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         playerAnimator = GetComponent<PlayerAnimator>();
-        playerController = FindObjectOfType<PlayerController>();      
+        playerController = FindObjectOfType<PlayerController>();
+        playerPosition = this.transform.position;      
     }
 
     private void Start()
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AudioManager.instance.StopSound("StepsConcrete");
         }
+                
                
         if (playerController.isObj)
         {
@@ -78,11 +81,15 @@ public class PlayerMovement : MonoBehaviour
         if (moving && agent.remainingDistance <= 0.01)
         {            
             agent.isStopped = true;            
-            moving = false;
+            moving = false;            
         }
 
         if (!moving)
         {
+
+            if (playerController.focus != null)
+                iTween.LookTo(this.gameObject, playerController.focus.transform.position, 1);
+
             Arrived();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -90,13 +97,9 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;           
+            Cursor.visible = false;         
         }
     }
-    
-
-
-    
 }
      
     
