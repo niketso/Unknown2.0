@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (playerController.isFuseBox)
         {
-            playerAnimator.OpenDoor();
+            playerAnimator.PickUpFront();
             playerController.isFuseBox = false;
         }
         else if (playerController.isFireAlarm)

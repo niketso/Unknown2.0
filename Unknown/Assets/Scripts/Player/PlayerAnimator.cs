@@ -56,16 +56,30 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetTrigger("OpenDoor");
     }
 
-    //evento de animacion pickUpFront();
+    //evento de animacion pickUpFront(); //aca tambien 
     public void PickUpNow()
-    {                  
-        playerController.focus.PickUpItem();       
+    {
+        if (playerController.focus.tag == "Object")
+        {
+            playerController.focus.PickUpItem();
+        }
+        else if (playerController.focus.tag == "FuseBox") //deberia ir en USENOW pero no tenemos otra animacion que no sea pickupnow
+        {
+            playerController.focus.UseNow();
+        }               
+               
     }
     //evento de animacion OpenDoor();
     public void OpenNow()
     {
         if(playerController.focus.tag == "Door")
             playerController.focus.OpenDoor();
+    }
+    
+    //evento de animacion UseNow(); ESTA ANIMACION NO EXISTE, USAMOS PICKUPFRONT
+    public void UseNow()
+    {
+        //playerController.focus.Interact();
     }
 
 
