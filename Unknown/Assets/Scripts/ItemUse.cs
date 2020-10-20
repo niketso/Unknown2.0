@@ -11,6 +11,8 @@ public class ItemUse : Interactable
     GameObject otherObject = null;
     [HideInInspector]
     public Vector3 stopingZonePos;
+    [SerializeField]
+    public GameObject illuminatinController;
 
 
     [SerializeField]   
@@ -38,6 +40,7 @@ public class ItemUse : Interactable
         AudioManager.instance.Play("PowerOn", false);
         //habilitar alarma
         otherObject.GetComponent<FireAlarm>().isUsable = true;
+        illuminatinController.GetComponent<illuminationController>().ChangeLights();
         //texto
         popUpController.PlayerWindow(playerSays);
         Invoke("disablePopUp", 3);
