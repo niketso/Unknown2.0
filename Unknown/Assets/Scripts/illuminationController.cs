@@ -11,6 +11,10 @@ public class illuminationController : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < emergencyLights.Length; i++)
+        {
+            emergencyLights[i].SetActive(true);
+        }
         for (int i = 0; i < normalLights.Length; i++)
         {
             normalLights[i].SetActive(false);
