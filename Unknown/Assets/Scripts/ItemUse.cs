@@ -40,9 +40,10 @@ public class ItemUse : Interactable
         AudioManager.instance.Play("PowerOn", false);
         //habilitar alarma
         otherObject.GetComponent<FireAlarm>().isUsable = true;
-        illuminatinController.GetComponent<illuminationController>().ChangeLights();
         //texto
         popUpController.PlayerWindow(playerSays);
+        illuminatinController.GetComponent<illuminationController>().ChangeLights();
+
         Invoke("disablePopUp", 3);
     }
     
