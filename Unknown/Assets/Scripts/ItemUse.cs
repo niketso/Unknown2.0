@@ -11,6 +11,8 @@ public class ItemUse : Interactable
     GameObject otherObject = null;
     [HideInInspector]
     public Vector3 stopingZonePos;
+    [SerializeField]
+    public GameObject illuminatinController;
 
 
     [SerializeField]   
@@ -39,6 +41,8 @@ public class ItemUse : Interactable
         otherObject.GetComponent<FireAlarm>().isUsable = true;
         //texto
         popUpController.PlayerWindow(playerSays);
+        illuminatinController.GetComponent<illuminationController>().ChangeLights();
+
         Invoke("disablePopUp", 3);
     }
     
