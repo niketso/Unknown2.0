@@ -46,14 +46,12 @@ public class Interactable : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position,radius);
-        
+        Gizmos.DrawWireSphere(transform.position,radius);        
     }
 
     public virtual void Interact()
     {
-        //cada objecto interactua de manera especifica.
-        //Debug.Log("Interacting with " + transform.name);
+        //vacio
     }
         
     public void PickUpItem()
@@ -65,5 +63,10 @@ public class Interactable : MonoBehaviour
     public void OpenDoor()
     {
         gameObject.GetComponent<ItemOpen>().Open();
+    }
+
+    public void UseNow()
+    {
+        gameObject.GetComponent<ItemUse>().Use();
     }          
 }

@@ -27,7 +27,6 @@ public class ItemUse : Interactable
     public override void Interact()
     {
         base.Interact();
-        Use();
     }
 
     public void Use()

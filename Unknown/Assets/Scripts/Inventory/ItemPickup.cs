@@ -14,8 +14,6 @@ public class ItemPickup : Interactable
     public override void Interact()
     {
         base.Interact();
-
-        //PickUp();
     }
 
     public void PickUp()
