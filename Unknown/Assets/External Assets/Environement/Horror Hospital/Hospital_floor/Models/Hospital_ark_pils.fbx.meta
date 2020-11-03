@@ -1,67 +1,151 @@
 fileFormatVersion: 2
 guid: 474e8f52f90d4624eac43438f9591fa1
-timeCreated: 1477828171
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Ark_door
-    100002: Door_ark_1
-    100004: Door_ark_2
-    100006: flat_ark_door
-    100008: flat_door_1
-    100010: flat_door_2
-    100012: //RootNode
-    100014: Hospital_pils
-    400000: Ark_door
-    400002: Door_ark_1
-    400004: Door_ark_2
-    400006: flat_ark_door
-    400008: flat_door_1
-    400010: flat_door_2
-    400012: //RootNode
-    400014: Hospital_pils
-    2300000: Ark_door
-    2300002: Door_ark_1
-    2300004: Door_ark_2
-    2300006: flat_ark_door
-    2300008: flat_door_1
-    2300010: flat_door_2
-    2300012: Hospital_pils
-    3300000: Ark_door
-    3300002: Door_ark_1
-    3300004: Door_ark_2
-    3300006: flat_ark_door
-    3300008: flat_door_1
-    3300010: flat_door_2
-    3300012: Hospital_pils
-    4300000: flat_ark_door
-    4300002: flat_door_1
-    4300004: flat_door_2
-    4300006: Ark_door
-    4300008: Door_ark_2
-    4300010: Door_ark_1
-    4300012: Hospital_pils
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Ark_door
+  - first:
+      1: 100002
+    second: Door_ark_1
+  - first:
+      1: 100004
+    second: Door_ark_2
+  - first:
+      1: 100006
+    second: flat_ark_door
+  - first:
+      1: 100008
+    second: flat_door_1
+  - first:
+      1: 100010
+    second: flat_door_2
+  - first:
+      1: 100012
+    second: //RootNode
+  - first:
+      1: 100014
+    second: Hospital_pils
+  - first:
+      4: 400000
+    second: Ark_door
+  - first:
+      4: 400002
+    second: Door_ark_1
+  - first:
+      4: 400004
+    second: Door_ark_2
+  - first:
+      4: 400006
+    second: flat_ark_door
+  - first:
+      4: 400008
+    second: flat_door_1
+  - first:
+      4: 400010
+    second: flat_door_2
+  - first:
+      4: 400012
+    second: //RootNode
+  - first:
+      4: 400014
+    second: Hospital_pils
+  - first:
+      23: 2300000
+    second: Ark_door
+  - first:
+      23: 2300002
+    second: Door_ark_1
+  - first:
+      23: 2300004
+    second: Door_ark_2
+  - first:
+      23: 2300006
+    second: flat_ark_door
+  - first:
+      23: 2300008
+    second: flat_door_1
+  - first:
+      23: 2300010
+    second: flat_door_2
+  - first:
+      23: 2300012
+    second: Hospital_pils
+  - first:
+      33: 3300000
+    second: Ark_door
+  - first:
+      33: 3300002
+    second: Door_ark_1
+  - first:
+      33: 3300004
+    second: Door_ark_2
+  - first:
+      33: 3300006
+    second: flat_ark_door
+  - first:
+      33: 3300008
+    second: flat_door_1
+  - first:
+      33: 3300010
+    second: flat_door_2
+  - first:
+      33: 3300012
+    second: Hospital_pils
+  - first:
+      43: 4300000
+    second: flat_ark_door
+  - first:
+      43: 4300002
+    second: flat_door_1
+  - first:
+      43: 4300004
+    second: flat_door_2
+  - first:
+      43: 4300006
+    second: Ark_door
+  - first:
+      43: 4300008
+    second: Door_ark_2
+  - first:
+      43: 4300010
+    second: Door_ark_1
+  - first:
+      43: 4300012
+    second: Hospital_pils
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_pils
+    second: {fileID: 2100000, guid: ae2b76deda0794243ab86a9b0837bb29, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -69,13 +153,23 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -85,9 +179,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -97,11 +196,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
