@@ -46994,7 +46994,7 @@ GameObject:
   - component: {fileID: 1603667430}
   - component: {fileID: 1603667429}
   - component: {fileID: 1603667428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StoppingZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47248,7 +47248,7 @@ GameObject:
   - component: {fileID: 1611534962}
   - component: {fileID: 1611534961}
   - component: {fileID: 1611534960}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StoppingZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
