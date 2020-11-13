@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             moving = true;
             agent.SetDestination(destination);
             playerAnimator.Walk();           
-            AudioManager.instance.Play("StepsConcrete", true);
+            AudioManager.instance.Play("StepsConcrete",false);
         }           
     }   
 

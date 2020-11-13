@@ -2810,7 +2810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1628109601
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2825,9 +2825,9 @@ RectTransform:
   m_Father: {fileID: 838222273}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6.7, y: -108}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.7, y: 276}
   m_SizeDelta: {x: 549.4, y: 301.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1628109602
@@ -3540,6 +3540,31 @@ PrefabInstance:
       propertyPath: sounds.Array.data[14].clip
       value: 
       objectReference: {fileID: 8300000, guid: 2ec0d02e7cf743a478130711cb5bbfcd, type: 3}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: AmbientHorror
+      objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190284, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
       propertyPath: m_Name

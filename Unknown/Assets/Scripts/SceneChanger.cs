@@ -10,6 +10,7 @@ public class SceneChanger : MonoBehaviour
         if (other.tag ==  "Player")
         {
             SceneManager.LoadScene("TestScene 1");
+            AudioManager.instance.Play("AmbientHorror", true);
             
         }
     }

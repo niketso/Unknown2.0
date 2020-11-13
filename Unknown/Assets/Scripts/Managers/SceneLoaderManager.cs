@@ -35,7 +35,7 @@ public class SceneLoaderManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         AudioManager.instance.StopSound("MenuMusic");
-        AudioManager.instance.Play("AmbientHorror", true);
+       // AudioManager.instance.Play("AmbientHorror", true);
         SceneManager.LoadScene(levelName);
     }
 
