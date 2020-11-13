@@ -31,8 +31,7 @@ public class FireAlarm : Interactable
     }
 
     public void Activate()
-    {
-        Debug.Log("Use fire alarm");
+    {        
         if (isUsable == true)
         {
             sprinklers.SetActive(true);
@@ -55,6 +54,7 @@ public class FireAlarm : Interactable
     void disableSprinklers()
     {
         sprinklers.SetActive(false);
+        AudioManager.instance.StopSound("FireAlarm");
     }
 
     void destroyFire()
