@@ -11,11 +11,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject optionsMenuUI = null;
     [SerializeField] private GameObject inventoryMenuUI = null;
     [SerializeField] private Slider volumeSlider = null;
+    [SerializeField] private Slider effectsSlider = null;
+    [SerializeField] private Slider musicSlider = null;
     public static bool gameIsPaused = false;
 
     private void Start()
     {
         volumeSlider.value = AudioManager.instance.startingVolume;
+        effectsSlider.value = AudioManager.instance.startingVolume;
+        musicSlider.value = AudioManager.instance.startingVolume;
     }
 
     private void Update()
@@ -71,6 +75,19 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetFloat("volume", sliderValue);
         AudioManager.instance.UpdateVolume(sliderValue);
     }
+
+    public void SetEffectsVolume(float sliderValue)
+    {
+        
+        AudioManager.instance.UpdateEffectsVolume(sliderValue);
+    }
+
+    public void SetMusicVolume(float sliderValue)
+    {
+
+        AudioManager.instance.UpdateMusicVolume(sliderValue);
+    }
+
 
     public void PlayAudio()
     {

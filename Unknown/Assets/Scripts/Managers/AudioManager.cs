@@ -75,6 +75,28 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void UpdateEffectsVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.isEffect)
+            {
+                s.source.volume = volume;
+            }
+        }
+    }
+
+    public void UpdateMusicVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.isMusic)
+            {
+                s.source.volume = volume;
+            }
+        }
+    }
+
     public bool SoundPlaying(string name)
     {
         bool isPlaying = false;
