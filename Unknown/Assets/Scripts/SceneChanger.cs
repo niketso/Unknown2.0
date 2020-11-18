@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     {
         if (other.tag ==  "Player")
         {
+            AudioManager.instance.StopAllSounds();
             SceneManager.LoadScene("TestScene 1");
             AudioManager.instance.Play("AmbientHorror", true);
             

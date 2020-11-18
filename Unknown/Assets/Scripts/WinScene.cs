@@ -9,6 +9,7 @@ public class WinScene : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            AudioManager.instance.StopAllSounds();
             SceneManager.LoadScene("WinScene");
         }
     }

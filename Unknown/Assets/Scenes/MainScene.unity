@@ -4111,6 +4111,16 @@ PrefabInstance:
       propertyPath: sounds.Array.data[14].isEffect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: effectsStartingVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: musicStartingVolume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190284, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
       propertyPath: m_Name
