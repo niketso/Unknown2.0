@@ -19,7 +19,9 @@ public class CarAlarm : MonoBehaviour
     void Update()
     {
         if (alarmOn)
-        {                      
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             zombie.GetComponent<NavMeshAgent>().SetDestination(destinationPosVec);
             zombie.GetComponent<Animator>().SetTrigger("Move");
             zombie.GetComponent<Animator>().SetBool("Walking",true);
@@ -30,6 +32,8 @@ public class CarAlarm : MonoBehaviour
         {
             zombie.GetComponent<Animator>().SetBool("Walking", false);
             zombieObstacle.GetComponent<ZombieObstacle>().hasArrived = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
