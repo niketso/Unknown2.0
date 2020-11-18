@@ -10,16 +10,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI = null;
     [SerializeField] private GameObject optionsMenuUI = null;
     [SerializeField] private GameObject inventoryMenuUI = null;
-    [SerializeField] private Slider volumeSlider = null;
+    //[SerializeField] private Slider volumeSlider = null;
     [SerializeField] private Slider effectsSlider = null;
     [SerializeField] private Slider musicSlider = null;
     public static bool gameIsPaused = false;
 
     private void Start()
     {
-        volumeSlider.value = AudioManager.instance.startingVolume;
-        effectsSlider.value = AudioManager.instance.startingVolume;
-        musicSlider.value = AudioManager.instance.startingVolume;
+        //volumeSlider.value = AudioManager.instance.startingVolume;
+        effectsSlider.value = AudioManager.instance.effectsStartingVolume;
+        musicSlider.value = AudioManager.instance.musicStartingVolume;
     }
 
     private void Update()
@@ -69,22 +69,24 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
     }
 
-    public void SetVolume(float sliderValue)
+   /* public void SetVolume(float sliderValue)
     {
         AudioManager.instance.startingVolume = sliderValue;
         PlayerPrefs.SetFloat("volume", sliderValue);
         AudioManager.instance.UpdateVolume(sliderValue);
-    }
+    }*/
 
     public void SetEffectsVolume(float sliderValue)
     {
-        
+        AudioManager.instance.effectsStartingVolume = sliderValue;
+        PlayerPrefs.SetFloat("effectsVolume", sliderValue);
         AudioManager.instance.UpdateEffectsVolume(sliderValue);
     }
 
     public void SetMusicVolume(float sliderValue)
     {
-
+        AudioManager.instance.musicStartingVolume = sliderValue;
+        PlayerPrefs.SetFloat("musicVolume", sliderValue);
         AudioManager.instance.UpdateMusicVolume(sliderValue);
     }
 

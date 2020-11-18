@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject MainMenuUI = null;
     [SerializeField] private GameObject OptionsMenuUI = null ;
     [SerializeField] private GameObject CreditsMenuUI = null ;
-    [SerializeField] private Slider volumeSlider = null;
+    //[SerializeField] private Slider volumeSlider = null;
     [SerializeField] private Slider musicSlider = null;
     [SerializeField] private Slider effectsSlider = null;
     [SerializeField] public Toggle fullscreenToggle = null;
@@ -26,9 +26,9 @@ public class MainMenu : MonoBehaviour
 
     public void OptionsMenu()
     {
-        volumeSlider.value = AudioManager.instance.startingVolume;
-        musicSlider.value = AudioManager.instance.startingVolume;
-        effectsSlider.value = AudioManager.instance.startingVolume;
+       // volumeSlider.value = AudioManager.instance.startingVolume;
+        musicSlider.value = AudioManager.instance.effectsStartingVolume;
+        effectsSlider.value = AudioManager.instance.musicStartingVolume;
         MainMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(true);
 
@@ -51,23 +51,27 @@ public class MainMenu : MonoBehaviour
         OptionsMenuUI.SetActive(true);
     }
 
-    public void SetVolume(float sliderValue)
+   /* public void SetVolume(float sliderValue)
     {
         AudioManager.instance.startingVolume = sliderValue;
         PlayerPrefs.SetFloat("volume", sliderValue);
-        AudioManager.instance.UpdateVolume(sliderValue);
+        //AudioManager.instance.UpdateVolume(sliderValue);
         AudioManager.instance.UpdateEffectsVolume(sliderValue);
         AudioManager.instance.UpdateMusicVolume(sliderValue);
 
-    }
+    }*/
 
     public void SetEffectsVolume(float sliderValue)
     {
+        AudioManager.instance.effectsStartingVolume = sliderValue;
+        PlayerPrefs.SetFloat("effectsVolume", sliderValue);
         AudioManager.instance.UpdateEffectsVolume(sliderValue);
     }
 
     public void SetMusicVolume(float sliderValue)
     {
+        AudioManager.instance.musicStartingVolume = sliderValue;
+        PlayerPrefs.SetFloat("musicVolume", sliderValue);
         AudioManager.instance.UpdateMusicVolume(sliderValue);
     }
 

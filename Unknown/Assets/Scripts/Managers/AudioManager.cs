@@ -5,7 +5,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [Range(0f, 1f)]
-    [SerializeField] public float startingVolume;
+    [SerializeField] public float effectsStartingVolume;
+    [Range(0f , 1f)]
+    [SerializeField] public float musicStartingVolume;
 
     
     public Sound[] sounds;
@@ -27,14 +29,25 @@ public class AudioManager : MonoBehaviour
     {
         instance = this;
 
-        if (!PlayerPrefs.HasKey("volume"))
+        if (!PlayerPrefs.HasKey("effectsVolume"))
         {
-            PlayerPrefs.SetFloat("volume", startingVolume);
+            PlayerPrefs.SetFloat("effectsVolume", effectsStartingVolume);
         }
         else
         {
-            startingVolume = PlayerPrefs.GetFloat("volume");
+            effectsStartingVolume = PlayerPrefs.GetFloat("effectsVolume");
         }
+
+        if (!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", musicStartingVolume);
+        }
+        else
+        {
+            musicStartingVolume = PlayerPrefs.GetFloat("musicVolume");
+        }
+
+
 
         DontDestroyOnLoad(this.gameObject);
 
@@ -42,7 +55,15 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = startingVolume;
+
+            if (s.isEffect)
+            {
+                s.source.volume = effectsStartingVolume;
+            }
+            else if(s.isMusic)
+            {
+                s.source.volume = musicStartingVolume;
+            }
         }
 
     }
