@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] public GameObject destination;
+    [SerializeField]
+    public GameObject destination;
     public Vector3 destinationPos;
     [HideInInspector]
     public Vector3 stopingZonePos;
