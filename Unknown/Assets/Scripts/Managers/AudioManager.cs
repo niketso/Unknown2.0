@@ -86,6 +86,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayAtHalf(string name, bool loop)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name == name)
+            {
+                s.source.loop = loop;
+                s.source.volume = s.source.volume * 0.05f;
+                s.source.Play();
+                Debug.Log(s.clip.name + " " + s.source.volume);
+            }
+        }
+    }
+
     public void UpdateVolume(float volume)
     {
         foreach (Sound s in sounds)
@@ -140,7 +154,7 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.loop = false;
                 s.source.Stop();
-                Debug.Log("Deteniendo sonido" + s.clip.name + " A este volumen:" + s.source.volume);
+               // Debug.Log("Deteniendo sonido" + s.clip.name + " A este volumen:" + s.source.volume);
             }
         }
     }

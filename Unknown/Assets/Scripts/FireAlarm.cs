@@ -37,7 +37,7 @@ public class FireAlarm : Interactable
             sprinklers.SetActive(true);
             AudioManager.instance.Play("FireAlarm",false);
             AudioManager.instance.Play("FireOff", false);
-            Invoke("destroyFire", 2);
+            Invoke("destroyFire", 3);
             Invoke("disableSprinklers",6);
         }
         else
@@ -59,6 +59,7 @@ public class FireAlarm : Interactable
 
     void destroyFire()
     {
+        AudioManager.instance.StopSound("Fire");
         Destroy(fire);
     }
 }
