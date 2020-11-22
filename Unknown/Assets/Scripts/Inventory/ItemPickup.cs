@@ -18,7 +18,8 @@ public class ItemPickup : Interactable
 
     public void PickUp()
     {
-        //Debug.Log("Picking up " + item.name);        
+        //Debug.Log("Picking up " + item.name);
+        AudioManager.instance.Play("PickUp", false);
         Inventory.instance.AddItem(item);       
     }
     

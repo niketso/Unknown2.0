@@ -3879,7 +3879,7 @@ PrefabInstance:
     - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
@@ -4120,6 +4120,21 @@ PrefabInstance:
         type: 3}
       propertyPath: musicStartingVolume
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[15].name
+      value: PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b85eb3937b77234c8f2fa89c285e5b4, type: 3}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[15].isEffect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190284, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
