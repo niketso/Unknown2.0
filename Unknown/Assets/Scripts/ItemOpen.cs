@@ -48,6 +48,7 @@ public class ItemOpen : Interactable
             //Invoke("disablePopUp", 3);
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
             AudioManager.instance.Play("DoorOpen", false);
+            this.GetComponent<BoxCollider>().enabled = false;
         }
         else
         {
