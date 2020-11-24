@@ -25,7 +25,8 @@ public class Obstacle : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            Debug.Log("entre");
+            //Debug.Log("entre");
+            AudioManager.instance.Play("Hurt", false);
             other.GetComponent<NavMeshAgent>().destination = destinationPos;
             popUpController.PlayerWindow(playerSays);
             Invoke("DisablePopUp", 3);
