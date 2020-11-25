@@ -44,8 +44,14 @@ public class PipeManager : MonoBehaviour
             puzzleUI.SetActive(false);
             gate.GetComponent<Animator>().SetTrigger("OpenGate");
             AudioManager.instance.Play("GateOpen",false);
+            Invoke("StopGate", 3);
 
         }
 
+    }
+
+    void StopGate()
+    {
+        AudioManager.instance.StopSound("GateOpen");
     }
 }
