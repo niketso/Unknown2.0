@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController playerController;
     private Vector3 playerPosition;
     public bool moving = false;
-    private float rotationSpeed = 1f;
+    //private float rotationSpeed = 1f;
 
     private void Awake()
     {

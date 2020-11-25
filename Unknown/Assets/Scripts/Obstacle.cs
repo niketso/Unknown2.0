@@ -19,13 +19,14 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         destinationPos = new Vector3(destination.transform.position.x, destination.transform.position.y, destination.transform.position.z);
-        AudioManager.instance.Play("Fire",true);
+        AudioManager.instance.PlayAtHalf("Fire",true);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {
-            Debug.Log("entre");
+            //Debug.Log("entre");
+            AudioManager.instance.Play("Hurt", false);
             other.GetComponent<NavMeshAgent>().destination = destinationPos;
             popUpController.PlayerWindow(playerSays);
             Invoke("DisablePopUp", 3);

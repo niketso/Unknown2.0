@@ -3879,7 +3879,7 @@ PrefabInstance:
     - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
@@ -4134,6 +4134,21 @@ PrefabInstance:
     - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
         type: 3}
       propertyPath: sounds.Array.data[15].isEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: Hurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f1786367d5cf2f442b8ab68786534c21, type: 3}
+    - target: {fileID: 8913632674464190283, guid: ca129c8ac145c3e428f2e07c93f13431,
+        type: 3}
+      propertyPath: sounds.Array.data[16].isEffect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8913632674464190284, guid: ca129c8ac145c3e428f2e07c93f13431,
