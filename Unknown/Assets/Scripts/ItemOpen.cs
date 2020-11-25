@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class ItemOpen : Interactable
 {
+    public PlayerAnimator playerAnimator;
+
     [SerializeField]
     public bool isLocked;
 
@@ -25,36 +27,38 @@ public class ItemOpen : Interactable
     public Vector3 destinationLockedDoorPos;
 
     public string playerSays1 = "It's Opened!";
-    public string  playerSays2 = "It's Locked!";
+    public string playerSays2 = "It's Locked!";
 
     private void Start()
     {
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimator>();
         stoppingZonePos = stoppingZone.transform.position;
-        if(isLocked)
-        destinationLockedDoorPos = new Vector3(destinationLockedDoor.transform.position.x, destinationLockedDoor.transform.position.y, destinationLockedDoor.transform.position.z);
+        if (isLocked)
+        {
+            destinationLockedDoorPos = new Vector3(destinationLockedDoor.transform.position.x, destinationLockedDoor.transform.position.y, destinationLockedDoor.transform.position.z);
+        }
     }
     public override void Interact()
     {
         base.Interact();
-        //Open();
     }
 
     public void Open()
     {
-        Debug.Log("OPEN");
         if (isLocked == false)
         {
-            //popUpController.PlayerWindow(playerSays1);
-            //Invoke("disablePopUp", 3);
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
             AudioManager.instance.Play("DoorOpen", false);
             this.GetComponent<BoxCollider>().enabled = false;
+            Invoke("enableMouse",2);
+            playerAnimator.Idle();
         }
         else
         {
             AudioManager.instance.Play("DoorLocked", false);
             popUpController.PlayerWindow(playerSays2);
             Invoke("disablePopUp", 3);
+            playerAnimator.Idle();
             Invoke("moveToPosition", 2);
         }        
     }
@@ -65,11 +69,13 @@ public class ItemOpen : Interactable
     }
 
     void moveToPosition()
-    {
-        Debug.Log("MOVE TO POSITION >> " + player.GetComponent<NavMeshAgent>().destination);
-        //player.GetComponent<NavMeshAgent>().destination = destinationLockedDoorPos;
-        player.GetComponent<PlayerMovement>().Walk(destinationLockedDoorPos);
+    {        
+        player.GetComponent<PlayerMovement>().Walk(destinationLockedDoorPos);        
+        Invoke("enableMouse", 3);
     }
 
-
+    void enableMouse()
+    {
+        InputManager.instance.UnlockMouse();
+    }
 }

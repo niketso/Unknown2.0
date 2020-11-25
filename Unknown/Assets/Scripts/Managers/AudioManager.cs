@@ -95,7 +95,7 @@ public class AudioManager : MonoBehaviour
                 s.source.loop = loop;
                 s.source.volume = s.source.volume * 0.05f;
                 s.source.Play();
-                Debug.Log(s.clip.name + " " + s.source.volume);
+                //Debug.Log(s.clip.name + " " + s.source.volume);
             }
         }
     }

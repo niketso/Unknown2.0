@@ -30,11 +30,10 @@ public class PlayerController : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 100))
             {               
-
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
-
+                    InputManager.instance.LockMouse();
                     if (interactable != null)
                     {                        
                         SetFocus(interactable);
@@ -42,7 +41,7 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         if (hit.transform.gameObject.CompareTag("Destination"))
-                        {                           
+                        {
                             destination = hit.point;                            
                             player.GetComponent<PlayerMovement>().Walk(destination);
                             isObj = false;
@@ -63,8 +62,8 @@ public class PlayerController : MonoBehaviour
                 focus.OnDeFocused();
             }
 
-            focus = newFocus;
-           
+            focus = newFocus;            
+
             if (newFocus.tag == "FuseBox")
             {
                 destination = newFocus.GetComponent<ItemUse>().stopingZonePos;
@@ -95,13 +94,11 @@ public class PlayerController : MonoBehaviour
                 player.GetComponent<PlayerMovement>().Walk(destination);
                 isDoor = true;
             }
-
-        }
-        
+        }        
         newFocus.OnFocused(player.transform);                
     }
 
-    void RemoveFocus()
+    public void RemoveFocus()
     {
         if (focus != null)
         {

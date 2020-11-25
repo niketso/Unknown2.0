@@ -41860,6 +41860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2
   player: {fileID: 5845835043250887314}
+  playerAnimator: {fileID: 0}
   isLocked: 1
   stoppingZone: {fileID: 1611534958}
   popUpController: {fileID: 987844043}
@@ -50109,6 +50110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2
   player: {fileID: 5845835043250887314}
+  playerAnimator: {fileID: 0}
   isLocked: 0
   stoppingZone: {fileID: 736038937}
   popUpController: {fileID: 987844043}
@@ -57199,6 +57201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2
   player: {fileID: 5845835043250887314}
+  playerAnimator: {fileID: 0}
   isLocked: 0
   stoppingZone: {fileID: 1603667426}
   popUpController: {fileID: 987844043}
@@ -61353,7 +61356,7 @@ GameObject:
   - component: {fileID: 1958034085}
   m_Layer: 2
   m_Name: LockedDoorDestination
-  m_TagString: Untagged
+  m_TagString: Destination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
