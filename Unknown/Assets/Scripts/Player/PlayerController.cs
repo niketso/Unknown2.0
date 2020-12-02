@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
                 focus.OnDeFocused();
             }
 
-            focus = newFocus;            
+            focus = newFocus;
 
             if (newFocus.tag == "FuseBox")
             {
@@ -105,5 +105,5 @@ public class PlayerController : MonoBehaviour
             focus.OnDeFocused();
         }
         focus = null;
-    }
+    }    
 }

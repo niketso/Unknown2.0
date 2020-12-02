@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Arrived() 
     {
-        Debug.Log("ENTRO ARRIVED");
+        //Debug.Log("ENTRO ARRIVED");
                        
         if (AudioManager.instance.SoundPlaying("StepsConcrete"))
         {
@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
                
         if (playerController.isObj)
         {
+            Debug.Log("enable 7");
             InputManager.instance.UnlockMouse();
             playerAnimator.PickUpFront();
             playerController.isObj = false; 
@@ -46,25 +47,29 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (playerController.isFuseBox)
         {
+            Debug.Log("enable 6");
             InputManager.instance.UnlockMouse();
             playerAnimator.PickUpFront();
             playerController.isFuseBox = false;
         }
         else if (playerController.isFireAlarm)
         {
+            Debug.Log("enable 5");
             InputManager.instance.UnlockMouse();
             playerAnimator.OpenDoor();
             playerController.isFireAlarm = false;
         }
         else if (playerController.isPuzzle)
         {
+            Debug.Log("enable 4");
             InputManager.instance.UnlockMouse();
             playerAnimator.OpenDoor();
             playerController.isPuzzle = false;
         }
-        else if (/*!playerController.focus*/!playerAnimator.pickingUp)
+        else if (!playerController.focus && !playerAnimator.pickingUp)
         {
-            Debug.Log("ARRIVED SIN FOCUS");
+            //Debug.Log("ARRIVED SIN FOCUS");
+            Debug.Log("enable 3");
             InputManager.instance.UnlockMouse();
             playerAnimator.Idle();
         }
