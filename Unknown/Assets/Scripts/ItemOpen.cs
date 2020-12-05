@@ -10,7 +10,7 @@ public class ItemOpen : Interactable
     PlayerController playerController;
 
     [SerializeField]
-    GameObject player1;
+    GameObject player1 = null;
 
     [SerializeField]
     public bool isLocked;
