@@ -8,26 +8,30 @@ public class FireAlarm : Interactable
     public bool isUsable = false;
     [SerializeField]
     GameObject fire = null;
+
     [SerializeField]
     GameObject stopingZone = null;
+
     [HideInInspector]
     public Vector3 stopingZonePos;
+
     [SerializeField]
     GameObject sprinklers = null;
 
     [SerializeField] 
     PopUpController popUpController = null;
 
+    private PlayerAnimator playerAnimator;
+
     string playerSays = "There's no power!";
     void Start()
     {
         stopingZonePos = stopingZone.transform.position;
+        playerAnimator = player.GetComponent<PlayerAnimator>();
     }
     public override void Interact()
     {
         base.Interact();
-
-        Activate();
     }
 
     public void Activate()
@@ -38,12 +42,16 @@ public class FireAlarm : Interactable
             AudioManager.instance.Play("FireAlarm",false);
             AudioManager.instance.Play("FireOff", false);
             Invoke("destroyFire", 3);
+            Invoke("enableMouse", 3);
             Invoke("disableSprinklers",6);
+            playerAnimator.Idle();
         }
         else
         {
             popUpController.PlayerWindow(playerSays);                      
             Invoke("disablePopUp", 3);
+            Invoke("enableMouse", 3);
+            playerAnimator.Idle();
         }
     }
     void disablePopUp()
@@ -61,5 +69,9 @@ public class FireAlarm : Interactable
     {
         AudioManager.instance.StopSound("Fire");
         Destroy(fire);
+    }
+    void enableMouse()
+    {
+        InputManager.instance.UnlockMouse();
     }
 }

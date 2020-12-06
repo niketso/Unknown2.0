@@ -35,7 +35,8 @@ public class PlayerController : MonoBehaviour
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
                     InputManager.instance.LockMouse();
                     if (interactable != null)
-                    {                        
+                    {
+                        RemoveFocus();
                         SetFocus(interactable);
                     }
                     else

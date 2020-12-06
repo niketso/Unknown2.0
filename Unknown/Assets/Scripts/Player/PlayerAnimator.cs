@@ -42,20 +42,20 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void Walk()
     {
-        //Debug.Log("MOVING = TRUE");
+        Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
     }
     public void PickUpFront()
     {
-        //Debug.Log("MOVING = TRUE");
+        Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("PickUpFront");        
     }
     public void OpenDoor()
     {
-        //Debug.Log("MOVING = TRUE");
+        Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("OpenDoor");
@@ -77,12 +77,14 @@ public class PlayerAnimator : MonoBehaviour
     //evento de animacion OpenDoor();
     public void OpenNow()
     {
-
         if (playerController.focus.tag == "Door")
         {
             playerController.focus.OpenDoor();
         }
-            
+        else if (playerController.focus.tag == "FireAlarm")
+        {
+            playerController.focus.ActivateNow();
+        }            
     }
     
     //evento de animacion UseNow(); ESTA ANIMACION NO EXISTE, USAMOS PICKUPFRONT
@@ -90,6 +92,8 @@ public class PlayerAnimator : MonoBehaviour
     {
         //playerController.focus.Interact();
     }
+
+    
 
 
 }

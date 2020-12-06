@@ -68,5 +68,10 @@ public class Interactable : MonoBehaviour
     public void UseNow()
     {
         gameObject.GetComponent<ItemUse>().Use();
+    }
+
+    public void ActivateNow()
+    {
+        gameObject.GetComponent<FireAlarm>().Activate();
     }          
 }

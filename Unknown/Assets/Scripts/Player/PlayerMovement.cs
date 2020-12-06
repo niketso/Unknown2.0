@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         else if (playerController.isFireAlarm)
         {
             Debug.Log("enable 5");
-            InputManager.instance.UnlockMouse();
             playerAnimator.OpenDoor();
             playerController.isFireAlarm = false;
         }
