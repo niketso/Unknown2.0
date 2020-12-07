@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
                
         if (playerController.isObj)
         {
-            Debug.Log("enable 7");
-            InputManager.instance.UnlockMouse();
             playerAnimator.PickUpFront();
             playerController.isObj = false; 
         }

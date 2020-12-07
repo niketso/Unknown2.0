@@ -57,7 +57,8 @@ public class Interactable : MonoBehaviour
     public void PickUpItem()
     {
         gameObject.GetComponent<ItemPickup>().PickUp();
-        Destroy(gameObject);
+        this.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(gameObject, 3);
     }
 
     public void OpenDoor()
