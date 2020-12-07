@@ -44,9 +44,7 @@ public class PlayerMovement : MonoBehaviour
             playerController.isDoor = false; 
         }
         else if (playerController.isFuseBox)
-        {
-            Debug.Log("enable 6");
-            InputManager.instance.UnlockMouse();
+        {            
             playerAnimator.PickUpFront();
             playerController.isFuseBox = false;
         }

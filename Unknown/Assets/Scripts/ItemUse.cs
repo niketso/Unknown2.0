@@ -14,6 +14,8 @@ public class ItemUse : Interactable
     [SerializeField]
     public GameObject illuminatinController;
 
+    PlayerAnimator playerAnimator;
+
 
     [SerializeField]   
     PopUpController popUpController = null;    
@@ -23,7 +25,8 @@ public class ItemUse : Interactable
 
     void Start()
     {
-        stopingZonePos = stopingZone.transform.position;        
+        stopingZonePos = stopingZone.transform.position;
+        playerAnimator = player.GetComponent<PlayerAnimator>();        
     }
 
     public override void Interact()
@@ -42,7 +45,7 @@ public class ItemUse : Interactable
         //texto
         popUpController.PlayerWindow(playerSays);
         illuminatinController.GetComponent<illuminationController>().ChangeLights();
-
+        Invoke("EnableMouse", 0.5f);
         Invoke("disablePopUp", 3);
     }
     
@@ -57,6 +60,12 @@ public class ItemUse : Interactable
     void disablePopUp()
     {
         popUpController.playerWindow.SetActive(false);
+    }
+
+    void EnableMouse()
+    {
+        InputManager.instance.UnlockMouse();
+        playerAnimator.Idle();
     }
 
 }
