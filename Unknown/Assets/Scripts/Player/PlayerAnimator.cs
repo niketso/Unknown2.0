@@ -42,20 +42,20 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void Walk()
     {
-        Debug.Log("MOVING = TRUE");
+        //Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
     }
     public void PickUpFront()
     {
-        Debug.Log("MOVING = TRUE");
+        //Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("PickUpFront");        
     }
     public void OpenDoor()
     {
-        Debug.Log("MOVING = TRUE");
+        //Debug.Log("MOVING = TRUE");
         playerAnimator.SetBool("Idle", false);
         playerAnimator.SetBool("Moving", true);
         playerAnimator.SetTrigger("OpenDoor");

@@ -36,37 +36,43 @@ public class PlayerMovement : MonoBehaviour
         if (playerController.isObj)
         {
             playerAnimator.PickUpFront();
-            playerController.isObj = false; 
+            playerController.isObj = false;
+            
         }
         else if (playerController.isDoor)
         {
             playerAnimator.OpenDoor();
-            playerController.isDoor = false; 
+            playerController.isDoor = false;
+            
         }
         else if (playerController.isFuseBox)
         {            
             playerAnimator.PickUpFront();
             playerController.isFuseBox = false;
+            
         }
         else if (playerController.isFireAlarm)
         {
-            Debug.Log("enable 5");
+            //Debug.Log("enable 5");
             playerAnimator.OpenDoor();
             playerController.isFireAlarm = false;
+            
         }
         else if (playerController.isPuzzle)
         {
-            Debug.Log("enable 4");
+            //Debug.Log("enable 4");
             InputManager.instance.UnlockMouse();
             playerAnimator.OpenDoor();
             playerController.isPuzzle = false;
+            
         }
         else if (!playerController.focus && !playerAnimator.pickingUp)
         {
             //Debug.Log("ARRIVED SIN FOCUS");
-            Debug.Log("enable 3");
+            //Debug.Log("enable 3");
             InputManager.instance.UnlockMouse();
             playerAnimator.Idle();
+            
         }
         
     }
@@ -87,9 +93,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moving && agent.remainingDistance <= 0.01)
         {
-            Debug.Log("MOVING = FALSE");         
+            //Debug.Log("MOVING = FALSE");         
             agent.isStopped = true;            
-            moving = false;            
+            moving = false;
+            Arrived();
         }
 
         if (!moving)
@@ -98,7 +105,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 iTween.LookTo(this.gameObject, playerController.focus.transform.position, 1);
             }
-            Arrived();
+            
+
 
         }
 

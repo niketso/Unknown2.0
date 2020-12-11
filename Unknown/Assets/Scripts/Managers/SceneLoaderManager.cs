@@ -43,9 +43,8 @@ public class SceneLoaderManager : MonoBehaviour
     private IEnumerator LoadMenu()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("MainScene");
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        SceneManager.LoadScene("MainScene");        
+        InputManager.instance.UnlockMouse();
     }
 
     

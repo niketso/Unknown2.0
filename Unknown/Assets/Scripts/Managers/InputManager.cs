@@ -31,11 +31,14 @@ public class InputManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Debug.Log("UnlockMouse");
     }
 
     public void LockMouse()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("LockMouse");
+
     }
 }

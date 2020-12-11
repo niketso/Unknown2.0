@@ -57,7 +57,7 @@ public class ItemOpen : Interactable
             this.GetComponentInParent<Animator>().SetTrigger("OpenDoor");
             AudioManager.instance.Play("DoorOpen", false);
             this.GetComponent<BoxCollider>().enabled = false;
-            Debug.Log("enable 1");
+            //Debug.Log("enable 1");
             Invoke("enableMouse", 2);
             playerAnimator.Idle();
         }

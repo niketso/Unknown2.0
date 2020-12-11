@@ -35,11 +35,12 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
                 }
                 else if(item.name == "Car Key")
                 {
-                    Debug.Log("es key"+ "Choco contra" + hit.transform.name);
+                    //Debug.Log("es key"+ "Choco contra" + hit.transform.name);
 
                     if (hit.transform.name == "Car")
                     {
                         // Debug.Log("es puerta y esta locked");
+                        //InputManager.instance.LockMouse();
                         AudioManager.instance.Play("CarAlarm", true);
                         hit.transform.GetComponent<CarAlarm>().TurnOnAlarm();
                         Inventory.instance.RemoveItem(item);
