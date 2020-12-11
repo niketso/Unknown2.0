@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuzzleItem : Interactable
 {
     [SerializeField] GameObject stoppingZone = null;
+    [SerializeField] GameObject puzzleInstructionsUI = null;
     [SerializeField] GameObject puzzleUI = null ;
     [SerializeField] GameObject zombieObstacle = null;
     public Vector3 stoppingZonePos;
@@ -25,6 +26,7 @@ public class PuzzleItem : Interactable
     {
         if (zombieObstacle.GetComponent<ZombieObstacle>().hasArrived)
         {
+            puzzleInstructionsUI.SetActive(true);
             puzzleUI.SetActive(true);
         }
     }
