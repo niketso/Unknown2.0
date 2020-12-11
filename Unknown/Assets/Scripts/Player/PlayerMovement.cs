@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator playerAnimator;
     private PlayerController playerController;
     private Vector3 playerPosition;
+    private Animator animatorController;
     public bool moving = false;
     //private float rotationSpeed = 1f;
 
@@ -17,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         playerAnimator = GetComponent<PlayerAnimator>();
         playerController = FindObjectOfType<PlayerController>();
-        playerPosition = this.transform.position;      
+        playerPosition = this.transform.position;
+        animatorController = GetComponent<Animator>();      
     }
 
     private void Start()
@@ -71,10 +73,8 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("ARRIVED SIN FOCUS");
             //Debug.Log("enable 3");
             InputManager.instance.UnlockMouse();
-            playerAnimator.Idle();
-            
-        }
-        
+            playerAnimator.Idle();            
+        }        
     }
 
     public void Walk(Vector3 destination)
@@ -99,23 +99,15 @@ public class PlayerMovement : MonoBehaviour
             Arrived();
         }
 
-        if (!moving)
+        if (animatorController.GetBool("Moving"))
         {
             if (playerController.focus != null)
             {
                 iTween.LookTo(this.gameObject, playerController.focus.transform.position, 1);
-            }
-            
-
-
+            }            
         }
-
     }
-
 }
-     
-    
-     
 
 
 
