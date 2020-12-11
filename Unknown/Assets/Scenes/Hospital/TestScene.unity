@@ -2557,7 +2557,7 @@ GameObject:
   - component: {fileID: 136209658}
   - component: {fileID: 136209657}
   - component: {fileID: 136209656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Rain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8047,7 +8047,7 @@ GameObject:
   - component: {fileID: 180065392}
   - component: {fileID: 180065391}
   - component: {fileID: 180065390}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Rain (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14326,9 +14326,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeDesk_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15492,6 +15508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeChair_1
       objectReference: {fileID: 0}
+    - target: {fileID: 144350, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 442048, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.849704
@@ -15944,7 +15964,7 @@ Transform:
   m_Children:
   - {fileID: 1393811338}
   m_Father: {fileID: 397340760}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &301982957
 Animator:
@@ -16187,6 +16207,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
       propertyPath: m_Name
       value: cabinet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16537,7 +16561,7 @@ GameObject:
   - component: {fileID: 350066077}
   - component: {fileID: 350066076}
   - component: {fileID: 350066075}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17571,7 +17595,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 553281409}
-  - {fileID: 1548760107}
   - {fileID: 1837783590}
   - {fileID: 301982956}
   - {fileID: 525664475}
@@ -19787,9 +19810,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeDesk_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20184,7 +20223,7 @@ PrefabInstance:
     - target: {fileID: 3389574087082598553, guid: 78df1db2fbc8ec64f949fac0c05bf693,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3389574087082598553, guid: 78df1db2fbc8ec64f949fac0c05bf693,
         type: 3}
@@ -20560,7 +20599,7 @@ RectTransform:
   - {fileID: 1502880094}
   - {fileID: 266525976}
   m_Father: {fileID: 397340760}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20827,9 +20866,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeDesk_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21759,6 +21814,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010113905034, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012278661256, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
       propertyPath: m_Name
       value: Ark_door
@@ -21767,9 +21826,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012278661256, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000014249385818, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014249385818, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000013378747836, guid: bf1aa9b0f2baf964ca45e1a5d9afd617, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23565,6 +23632,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012547174942, guid: b11d0195275792b4394e3718f62151be, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012624405322, guid: b11d0195275792b4394e3718f62151be, type: 3}
       propertyPath: m_Name
       value: commode_1
@@ -23572,6 +23643,10 @@ PrefabInstance:
     - target: {fileID: 1000012624405322, guid: b11d0195275792b4394e3718f62151be, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012624405322, guid: b11d0195275792b4394e3718f62151be, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010458070518, guid: b11d0195275792b4394e3718f62151be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23844,6 +23919,10 @@ PrefabInstance:
     - target: {fileID: 1000013198370406, guid: 7fa2e1e02dd428149866578d5b92e000, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013198370406, guid: 7fa2e1e02dd428149866578d5b92e000, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011146301728, guid: 7fa2e1e02dd428149866578d5b92e000, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24905,6 +24984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cabinet
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.688002
@@ -25570,6 +25653,10 @@ PrefabInstance:
     - target: {fileID: 1000011685618698, guid: 144150a4c16962f49b2eb1fff51028b9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011685618698, guid: 144150a4c16962f49b2eb1fff51028b9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000013044501924, guid: 144150a4c16962f49b2eb1fff51028b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27301,7 +27388,7 @@ GameObject:
   - component: {fileID: 862547813}
   - component: {fileID: 862547812}
   - component: {fileID: 862547811}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27571,6 +27658,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27898,7 +27989,7 @@ GameObject:
   - component: {fileID: 891767278}
   - component: {fileID: 891767277}
   - component: {fileID: 891767276}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28403,7 +28494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922893565}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ReceptionDesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28450,6 +28541,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29135,7 +29230,7 @@ GameObject:
   - component: {fileID: 962880004}
   - component: {fileID: 962880003}
   - component: {fileID: 962880002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29251,6 +29346,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ab1be62d0fa9f5f42bdafc3babed321c, type: 3}
       propertyPath: m_Name
       value: shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ab1be62d0fa9f5f42bdafc3babed321c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab1be62d0fa9f5f42bdafc3babed321c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30139,6 +30238,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1310005
@@ -31011,7 +31114,7 @@ GameObject:
   - component: {fileID: 1072843810}
   - component: {fileID: 1072843809}
   - component: {fileID: 1072843808}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Sprinkler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32175,7 +32278,7 @@ GameObject:
   - component: {fileID: 1173778617}
   - component: {fileID: 1173778616}
   - component: {fileID: 1173778615}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Rain (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37031,6 +37134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ab1be62d0fa9f5f42bdafc3babed321c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab1be62d0fa9f5f42bdafc3babed321c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1860027
@@ -37493,6 +37600,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38662,7 +38773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274123344}
   - component: {fileID: 1274123345}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DoorPivot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39552,6 +39663,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7890017
@@ -40072,6 +40187,10 @@ PrefabInstance:
     - target: {fileID: 1000010789081180, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010789081180, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010717166630, guid: f0361437737ec0c41aec89b2f35adb51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41978,7 +42097,7 @@ RectTransform:
   - {fileID: 650975058}
   - {fileID: 473208857}
   m_Father: {fileID: 397340760}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43418,9 +43537,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeDesk_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43685,7 +43820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480042612}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprinklers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43720,6 +43855,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
       propertyPath: m_Name
       value: cabinet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8de9c6b1be28544a92fddfa2e71186, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43879,6 +44018,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010317865130, guid: 563240cb155ac414fb27fad7ff3ea080, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011865892826, guid: 563240cb155ac414fb27fad7ff3ea080, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.693
@@ -43951,6 +44094,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45457,6 +45604,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010492573492, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010040122226, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5429986
@@ -45627,13 +45778,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548760106}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.586, y: 5.9831, z: 5.555}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 7.0847826, y: -1.7555354, z: 12.563345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1026207207}
-  m_Father: {fileID: 397340760}
-  m_RootOrder: 1
+  m_Father: {fileID: 1629996006}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1548760108
 Animator:
@@ -47497,6 +47648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeChair_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 144350, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 442048, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.579002
@@ -47841,9 +47996,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013521301016, guid: d1b39d7d31305bf41a8b704d854bf40a, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013947547460, guid: d1b39d7d31305bf41a8b704d854bf40a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013947547460, guid: d1b39d7d31305bf41a8b704d854bf40a, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010382145274, guid: d1b39d7d31305bf41a8b704d854bf40a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47997,6 +48160,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011685618698, guid: 144150a4c16962f49b2eb1fff51028b9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013044501924, guid: 144150a4c16962f49b2eb1fff51028b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5999978
@@ -48063,6 +48230,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48216,7 +48387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629996006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: --Doors--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48236,6 +48407,7 @@ Transform:
   m_Children:
   - {fileID: 608359436}
   - {fileID: 1274123344}
+  - {fileID: 1548760107}
   m_Father: {fileID: 1139743378}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48257,6 +48429,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48972,6 +49148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_1
       objectReference: {fileID: 0}
+    - target: {fileID: 187642, guid: 9e2e17fdb01b85349a2b8ba3c9e349fb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 402354, guid: 9e2e17fdb01b85349a2b8ba3c9e349fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.29
@@ -49037,9 +49217,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1794310396}
     m_Modifications:
+    - target: {fileID: 1000010424534078, guid: bbc921e76de47404897b9ee2df795603, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1000010963814808, guid: bbc921e76de47404897b9ee2df795603, type: 3}
       propertyPath: m_Name
       value: MouseKeyboard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010963814808, guid: bbc921e76de47404897b9ee2df795603, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012019095292, guid: bbc921e76de47404897b9ee2df795603, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000014059896014, guid: bbc921e76de47404897b9ee2df795603, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49989,6 +50181,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010492573492, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010040122226, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.514
@@ -50526,7 +50722,7 @@ GameObject:
   - component: {fileID: 1712411887}
   - component: {fileID: 1712411886}
   - component: {fileID: 1712411885}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Rain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55374,6 +55570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeChair_1
       objectReference: {fileID: 0}
+    - target: {fileID: 144350, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 442048, guid: 36a7c36a016378e4a8f00004c68a1f3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.45
@@ -57099,7 +57299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1794310396}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: --Others--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57684,7 +57884,7 @@ GameObject:
   - component: {fileID: 1823049081}
   - component: {fileID: 1823049080}
   - component: {fileID: 1823049079}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58112,7 +58312,7 @@ Transform:
   m_Children:
   - {fileID: 931975365}
   m_Father: {fileID: 397340760}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1837783591
 Animator:
@@ -60234,7 +60434,7 @@ PrefabInstance:
     - target: {fileID: 4266733640507781932, guid: c840d444cbfac8a43a91ccd20b13e9c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4266733640507781932, guid: c840d444cbfac8a43a91ccd20b13e9c5,
         type: 3}
@@ -60641,6 +60841,22 @@ PrefabInstance:
     - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_Name
       value: OfficeDesk_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61057,7 +61273,7 @@ GameObject:
   - component: {fileID: 1948574267}
   - component: {fileID: 1948574266}
   - component: {fileID: 1948574265}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62435,6 +62651,10 @@ PrefabInstance:
     - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012292152452, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011425849990, guid: 758d63bcb325cf54f8c718ccfde24a95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64903,6 +65123,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010492573492, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010040122226, guid: 8531af7061cafd146bca1b398faa9abc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.16
@@ -65222,9 +65446,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeDesk_1
       objectReference: {fileID: 0}
+    - target: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132502, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132588, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475072, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
       propertyPath: m_LocalPosition.x
