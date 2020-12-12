@@ -67,14 +67,7 @@ public class PauseMenu : MonoBehaviour
     {
         optionsMenuUI.SetActive(true);
         pauseMenuUI.SetActive(false);
-    }
-
-   /* public void SetVolume(float sliderValue)
-    {
-        AudioManager.instance.startingVolume = sliderValue;
-        PlayerPrefs.SetFloat("volume", sliderValue);
-        AudioManager.instance.UpdateVolume(sliderValue);
-    }*/
+    }   
 
     public void SetEffectsVolume(float sliderValue)
     {
@@ -93,7 +86,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PlayAudio()
     {
-        //AudioManager.instance.Play("",false);
+        
     }
 
     public void MainMenu()

@@ -29845,7 +29845,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4566142619381287516}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1476670508}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 537aa154987b2e240bcb367b6a53dc17, type: 3}
@@ -43811,6 +43811,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1475593893}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1476670508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4566142619802863509, guid: 44f6a4d91e2811e48a4d5c9a835aede9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4566142619381287516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1480042611
 GameObject:
   m_ObjectHideFlags: 0
@@ -47802,6 +47808,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1476670508}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1613597370
 MonoBehaviour:
@@ -65700,7 +65717,7 @@ PrefabInstance:
     - target: {fileID: 4566142619802863509, guid: 44f6a4d91e2811e48a4d5c9a835aede9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4566142619802863510, guid: 44f6a4d91e2811e48a4d5c9a835aede9,
         type: 3}
@@ -68056,6 +68073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IntroPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413857122337234611, guid: 72bbc01c4cb0a084682ebcaf9afa577a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8413857122337234612, guid: 72bbc01c4cb0a084682ebcaf9afa577a,
         type: 3}
