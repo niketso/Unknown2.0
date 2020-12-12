@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         else if (playerController.isPuzzle)
         {
             //Debug.Log("enable 4");
-            InputManager.instance.UnlockMouse();
+            
             playerAnimator.OpenDoor();
             playerController.isPuzzle = false;
             

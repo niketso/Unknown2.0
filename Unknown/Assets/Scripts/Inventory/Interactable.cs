@@ -74,5 +74,10 @@ public class Interactable : MonoBehaviour
     public void ActivateNow()
     {
         gameObject.GetComponent<FireAlarm>().Activate();
+    }
+
+    public void ActivatePuzzleNow()
+    {
+        gameObject.GetComponent<PuzzleItem>().ActivatePuzzle();
     }          
 }

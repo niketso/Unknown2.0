@@ -9,17 +9,17 @@ public class PuzzleItem : Interactable
     [SerializeField] GameObject puzzleUI = null ;
     [SerializeField] GameObject zombieObstacle = null;
     public Vector3 stoppingZonePos;
+    PlayerAnimator playerAnimator;
 
     private void Start()
     {
         stoppingZonePos = stoppingZone.transform.position;
+        playerAnimator = player.GetComponent<PlayerAnimator>();
     }
 
     public override void Interact()
     {
-        base.Interact();
-
-        ActivatePuzzle();
+        base.Interact();      
     }
 
     public void ActivatePuzzle()
@@ -28,6 +28,8 @@ public class PuzzleItem : Interactable
         {
             puzzleInstructionsUI.SetActive(true);
             puzzleUI.SetActive(true);
+            playerAnimator.Idle();
+            InputManager.instance.UnlockMouse();
         }
     }
 

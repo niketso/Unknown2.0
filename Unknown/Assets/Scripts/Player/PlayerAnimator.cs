@@ -84,6 +84,10 @@ public class PlayerAnimator : MonoBehaviour
         else if (playerController.focus.tag == "FireAlarm")
         {
             playerController.focus.ActivateNow();
+        }
+        else if (playerController.focus.tag == "Puzzle")
+        {
+            playerController.focus.ActivatePuzzleNow();
         }            
     }
     
