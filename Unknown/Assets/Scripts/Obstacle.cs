@@ -19,7 +19,7 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         destinationPos = new Vector3(destination.transform.position.x, destination.transform.position.y, destination.transform.position.z);
-        AudioManager.instance.PlayAtHalf("Fire",true);
+        AudioManager.instance.PlayAtHalf("Fire2",true);
     }
     private void OnTriggerEnter(Collider other)
     {

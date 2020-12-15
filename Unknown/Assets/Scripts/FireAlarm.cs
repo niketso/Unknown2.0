@@ -48,6 +48,7 @@ public class FireAlarm : Interactable
         }
         else
         {
+            AudioManager.instance.Play("AlarmBreaker", false);
             popUpController.PlayerWindow(playerSays);                      
             Invoke("disablePopUp", 3);
             Invoke("enableMouse", 3);
