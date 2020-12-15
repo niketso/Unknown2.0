@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
+    public bool locked = false;
 
     public static InputManager Instance
     {
@@ -31,6 +32,7 @@ public class InputManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        locked = false;
         Debug.Log("UnlockMouse");
     }
 
@@ -38,6 +40,7 @@ public class InputManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        locked = true;
         Debug.Log("LockMouse");
 
     }

@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Slider effectsSlider = null;
     [SerializeField] private Slider musicSlider = null;
     public static bool gameIsPaused = false;
+    private bool locked = false;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                locked = InputManager.instance.locked;
                 Pause();
             }
         }
@@ -39,6 +41,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        if (locked)
+        {
+            InputManager.instance.LockMouse();
+        }
+
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(false);
         inventoryMenuUI.SetActive(true);
@@ -50,6 +57,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        InputManager.instance.UnlockMouse();
         pauseMenuUI.SetActive(true);
         inventoryMenuUI.SetActive(false);
 
