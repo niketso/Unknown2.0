@@ -99,6 +99,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        AudioManager.instance.StopAllSounds();
         SceneManager.LoadScene("MainScene");
     }
 
