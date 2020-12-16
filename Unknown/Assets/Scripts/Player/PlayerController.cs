@@ -16,9 +16,16 @@ public class PlayerController : MonoBehaviour
     public bool isFireAlarm = false;
     public bool isPuzzle = false;
 
+    LayerMask layerMask = 1 << 12;    
+
     Vector3 destination;
 
     public Interactable focus;
+
+    void Start()
+    {
+        layerMask = ~layerMask;
+    }
 
     void Update()
     {
@@ -28,7 +35,7 @@ public class PlayerController : MonoBehaviour
        
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
-            if (Physics.Raycast(ray, out hit, 100))
+            if (/*Physics.Raycast(ray, out hit, 100)*/Physics.Raycast(ray, out hit,100,layerMask))
             {               
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
