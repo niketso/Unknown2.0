@@ -36,8 +36,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !(Cursor.lockState == CursorLockMode.Locked))
         {
             if (/*Physics.Raycast(ray, out hit, 100)*/Physics.Raycast(ray, out hit,100,layerMask))
-            {               
-                if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Ray Hit >> " + hit.transform.name);
+                if (!EventSystem.current.IsPointerOverGameObject() && hit.transform.gameObject.layer != 10)
                 {
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
                     InputManager.instance.LockMouse();
