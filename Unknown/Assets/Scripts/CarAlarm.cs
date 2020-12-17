@@ -11,10 +11,13 @@ public class CarAlarm : MonoBehaviour
     [SerializeField] GameObject destinationPos = null;
     private Vector3 destinationPosVec;
     float dist;
+    [SerializeField] public GameObject gateControl;
+
 
     private void Start()
     {
-        destinationPosVec = new Vector3(destinationPos.transform.position.x, destinationPos.transform.position.y, destinationPos.transform.position.z);        
+        destinationPosVec = new Vector3(destinationPos.transform.position.x, destinationPos.transform.position.y, destinationPos.transform.position.z); 
+               
     }
 
     private void Update()
@@ -42,6 +45,7 @@ public class CarAlarm : MonoBehaviour
             zombieObstacle.GetComponent<ZombieObstacle>().hasArrived = true;
             InputManager.instance.UnlockMouse();
             zombieMoved = false;
+            gateControl.GetComponent<PuzzleItem>().isUsable = true;
         }
     }
 

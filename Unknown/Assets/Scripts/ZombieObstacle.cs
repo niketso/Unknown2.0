@@ -13,6 +13,7 @@ public class ZombieObstacle : MonoBehaviour
     private void Start()
     {
         destinationPos = new Vector3(destination.transform.position.x, destination.transform.position.y, destination.transform.position.z);
+
            
     }
 
@@ -33,6 +34,6 @@ public class ZombieObstacle : MonoBehaviour
 
     void DisablePopUp()
     {
-        popUpController.playerWindow.SetActive(false);
+        popUpController.playerWindow.SetActive(false);        
     }
 }

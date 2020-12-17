@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] public GameObject player;
     [SerializeField] public CameraController cc;
+
     private Camera rayCamera;
     public bool isObj = false;
     public bool isDoor = false;
@@ -93,9 +94,14 @@ public class PlayerController : MonoBehaviour
             }
             else if (newFocus.tag == "Puzzle")
             {
-                destination = newFocus.GetComponent<PuzzleItem>().stoppingZonePos;
-                player.GetComponent<PlayerMovement>().Walk(destination);
-                isPuzzle = true;
+                if (focus.GetComponent<PuzzleItem>().isUsable == true)
+                {
+                    destination = newFocus.GetComponent<PuzzleItem>().stoppingZonePos;
+                    player.GetComponent<PlayerMovement>().Walk(destination);
+                    isPuzzle = true;
+                }
+                else
+                    InputManager.instance.UnlockMouse();
             }
             else if (newFocus.tag == "Door")
             {
@@ -104,7 +110,8 @@ public class PlayerController : MonoBehaviour
                 isDoor = true;
             }
         }        
-        newFocus.OnFocused(player.transform);                
+        newFocus.OnFocused(player.transform);      
+                  
     }
 
     public void RemoveFocus()

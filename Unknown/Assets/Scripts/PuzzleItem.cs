@@ -10,6 +10,7 @@ public class PuzzleItem : Interactable
     [SerializeField] GameObject zombieObstacle = null;
     public Vector3 stoppingZonePos;
     PlayerAnimator playerAnimator;
+    public bool isUsable = false;
 
     private void Start()
     {
@@ -32,5 +33,4 @@ public class PuzzleItem : Interactable
             InputManager.instance.UnlockMouse();
         }
     }
-
 }
