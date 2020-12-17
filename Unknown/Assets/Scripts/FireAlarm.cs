@@ -68,7 +68,7 @@ public class FireAlarm : Interactable
 
     void destroyFire()
     {
-        AudioManager.instance.StopSound("Fire");
+        AudioManager.instance.StopSound("Fire1");
         Destroy(fire);
     }
     void enableMouse()
