@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 156028909}
   - component: {fileID: 156028908}
   - component: {fileID: 156028907}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Destination
   m_Icon: {fileID: 0}
@@ -13185,7 +13185,7 @@ GameObject:
   - component: {fileID: 1490845208}
   - component: {fileID: 1490845207}
   - component: {fileID: 1490845206}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: StoppingZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14038,7 +14038,7 @@ GameObject:
   - component: {fileID: 1625576721}
   - component: {fileID: 1625576720}
   - component: {fileID: 1625576719}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Destination
   m_Icon: {fileID: 0}
