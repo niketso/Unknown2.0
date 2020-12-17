@@ -20896,7 +20896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.4
   player: {fileID: 5845835043250887314}
-  isUsable: 1
+  isUsable: 0
   fire: {fileID: 1400574700}
   stopingZone: {fileID: 249368069}
   stopingZonePos: {x: 0, y: 0, z: 0}
